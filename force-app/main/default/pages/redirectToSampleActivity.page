@@ -1,0 +1,6 @@
+<apex:page standardController="Activity_Master__c" extensions="redirectToSampleActivityController" action="{!reDirectToActivity}">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: redirectToSampleActivity
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

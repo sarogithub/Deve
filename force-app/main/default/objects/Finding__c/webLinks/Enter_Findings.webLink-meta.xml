@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_Findings</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Enter Findings</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a02/e?CF00N1I000007LIim={!Case_Activity__c.Name}&amp;CF00N1I000007LIim_lkid={!Case_Activity__c.Id}&amp;retURL=%2F{!Case_Activity__c.Id}&amp;CF00N1I000007LIiw={!Case_Activity__c.Case__c}&amp;CF00N1I000007LIiw_lkid={!Case_Activity__c.CaseId__c}</url>
+</WebLink>

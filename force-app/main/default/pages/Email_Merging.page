@@ -1,0 +1,166 @@
+<apex:page standardController="case" renderAs="PDF" sidebar="Flse" showHeader="False" >
+    <html>
+
+    <head>
+        <style>
+            #fontSize {
+                font-size: 200px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <table border="0" width="100%">
+            <tr>
+                <td>
+                    <apex:image url="{!$Resource.MyersStauffers}" width="230" height="130" />
+                </td>
+                <td align="right">
+                    <apex:image url="{!$Resource.Dept_Of_Health}" width="130" height="100" />
+                </td>
+            </tr>
+        </table>
+        <p>
+            <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                <apex:param value="{!NOW()}" />
+            </apex:outputText>
+        </p>
+
+        <table border="0" width="100%">
+            <tr align="right">
+                <td>CERTIFIED MAIL</td>
+            </tr>
+        </table>
+
+        <!-- Body -->
+        <table border="0" width="100%" style="font-size:15.5px; ">
+            <tr>
+                <td>{!IF(case.Contact.FirstName != null,case.Contact.FirstName+' '+case.Contact.LastName, case.Contact.LastName)}</td>
+            </tr>
+            <tr>
+                <td>Attendant : {!IF(case.Contact.FirstName != null,case.Contact.FirstName+ case.Contact.LastName, case.Contact.LastName)}</td>
+            </tr>
+            
+            <apex:outputLabel rendered="{!IF(case.Contact.MailingStreet!= null, true, false)}">
+            <tr>
+                <td>Street - {!case.Contact.MailingStreet}</td>
+            </tr>
+           </apex:outputLabel>
+           
+           <apex:outputLabel rendered="{!IF(case.Contact.MailingCity != null, true, false)}">
+            <tr>
+                <td>City - {!case.Contact.MailingCity}</td>
+            </tr>
+           </apex:outputLabel>
+           
+           <apex:outputLabel rendered="{!IF(case.Contact.MailingState!= null, true, false)}">
+            <tr>
+                <td>State- {!case.Contact.MailingState}</td>
+            </tr>
+           </apex:outputLabel>
+           
+            <apex:outputLabel rendered="{!IF(case.Contact.MailingCountry!= null, true, false)}">
+            <tr>
+                <td>Country- {!case.Contact.MailingCountry}</td>
+            </tr>
+           </apex:outputLabel>
+           
+           <apex:outputLabel rendered="{!IF(case.Contact.MailingPostalCode!= null, true, false)}">
+            <tr>
+                <td>Postal Code- {!case.Contact.MailingPostalCode}</td>
+            </tr>
+           </apex:outputLabel>
+           
+        </table>
+
+        <p style="font-size:15.5px; ">RE : {!IF(case.Contact.FirstName != null,case.Contact.FirstName+ case.Contact.LastName, case.Contact.LastName)}</p>
+
+        <p style="font-size:15.5px; ">Dear {!IF(case.Contact.FirstName != null,case.Contact.FirstName+ case.Contact.LastName, case.Contact.LastName)},</p>
+        <p style="font-size:15.5px; ">
+            This letter is notification that your facility has been selected for a review of all credit balances related to Medicaid inpatient and outpatient claims. The objective of this review is to determine whether credit balances that exist within facility records for nursing home services represent overpayments that should be returned to the Wyoming Medicaid program. As such, we request the following steps be taken:
+        </p>
+
+        <ul style="list-style-type:decimal;font-size:15.5px;">
+            <li>Perform a self-review of Medicaid credit balances that existed as of
+            <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                <apex:param value="{!NOW()}" />
+            </apex:outputText>.
+                <br />
+            </li>
+            <li>Submit a report of identified Medicaid overpayments for our review and confirmation (Addendum A).</li>
+        </ul>
+
+        <p style="font-size:15.5px;"><b style="text-decoration: underline;">MEDICAID OVERPAYMENT REPORT (ADDENDUM A)</b></p>
+        <p style="font-size:15.5px;">As noted above, please complete Addendum A. </p>
+        <p style="font-size:15.5px;"><b style="text-decoration: underline;">SUPPORTING DOCUMENTS</b>
+            <br />
+            <br />Please provide copies of the following documents for each account reported on Addendum A:</p>
+
+        <ul style="list-style-type:decimal;font-size:15.5px;">
+            <li>Patient financial ledger(s) identifying the reported Medicaid overpayment for each account reported. This document should outline the nursing home services for the dates of service reported and subsequent payments/contractual adjustments.
+                <br/>
+            </li>
+            <li>Documentation of voids and/or adjustments that has been previously submitted in attempt to resolve the credit balance. Where attempts have been made to resolve any unresolved credit balances, please include notes and supporting documentation to explain why refunds have not previously been completed.
+                <br />
+            </li>
+            <li>Medicaid refund documentation for any accounts on Addendum A that have been partially refunded.
+                <br/>
+                <br />
+            </li>
+        </ul>
+
+        <b style="text-decoration: underline;">OTHER REQUIRED DOCUMENTS</b>
+        <ul style="List-Style-Type:Decimal;font-size:15.5px;">
+            <li>A transaction code definition listing that supports the transactions recorded on the patient’s account transaction ledger.
+                <br />
+            </li>
+            <li>A completed Provider Information Survey (attachment).
+                <br />
+            </li>
+            <li>A signed Provider Certification Statement (attachment).</li>
+        </ul>
+
+        <p style="font-size:15.5px;">If questions arise during our verification of your results, we may request additional data.</p>
+
+        <p style="font-size:15.5px;">The requested items should be submitted to our office within thirty (30) calendar days of the date of this request. An extension to this deadline may be granted for good cause by contacting our office prior to the due date. </p>
+
+        <p style="font-size:15.5px;">We require that electronic copies of the documentation be submitted in lieu of paper documents. Appropriate methods of transmission are as follows:</p>
+        <ul style="List-Style-Type:Decimal;font-size:15.5px;">
+            <li><b style="text-decoration: underline;">FTP (Recommended): </b>Upload electronic files to the Myers and Stauffer secure FTP web portal. If you do not already have an account, please contact our office immediately so that a secure account can be created for you.</li>
+            <li><b style="text-decoration: underline;">Secured Email:</b> Send electronic files through a secure email to <a href="mailTo:WY_RAC@mslc.com"> WY_RAC@mslc.com.</a> If you intend to use this method of transmission, please ensure that the program you use has the proper encryption specifications to securely transmit Protected Health Information (PHI).</li>
+            <li><b style="text-decoration: underline;">Mail: </b> &nbsp; &nbsp; Send CD or other electronic media by mail to the following address:
+                <ul style="List-Style-Type: None;">
+                    <li>
+                        <br />Myers and Stauffer LC</li>
+                    <li>W Hackmore Drive, Suite 100</li>
+                    <li>Boise, ID 83709-1693</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p style="font-size:15.5px;"> <b style="text-decoration: underline;">You should ensure that all transmissions of PHI are HIPAA and HITECH compliant </b> Information collected will be held in strict confidence in compliance with all applicable policies, requirements, regulations, and statutes. Myers and Stauffer LC has a Business Associates Agreement with the Department and therefore has instituted substantial safeguards to prevent use or disclosure of information obtained during the course of the engagement.
+        </p>
+
+        <p style="font-size:15.5px;"><b style="text-decoration: underline;">It is imperative that you do not attempt to adjust, void or submit any repayments for these claims at this time. Actions taken during the course of our review can create delays in our review process. </b> &nbsp; If you DO need to take some action (e.g., adjustment due to third-party payment received) on any of the reported claims during this time, please contact our office to discuss options for resolution prior to submitting changes to such claims.
+            <br />
+            <br /> The results of our review will be reported to the Wyoming Division of Healthcare Financing Medicaid and applicable correspondence will be forwarded to your facility, including instructions for any further actions that may need to be taken. In the event that results from the desk review procedures are inconclusive, it may be necessary to conduct an on-site review. In accordance with the Wyoming Medicaid Rules, Chapter 16, Section 9, and other applicable Federal laws, providers shall make all financial or medical records available upon request.
+            <br />
+            <br /> Thank you for your participation in this process. Please do not hesitate to contact us at (855) 839-9262 if you have any questions regarding this review.
+            <br /><br /><br />
+            <br /> Sincerely,
+            <br />
+            <br /> ({!case.Owner.Name})
+
+            <br /> Myers and Stauffer LC
+            <br />
+            <!--
+Attachments:  &nbsp;&nbsp;&nbsp;  Addendum A and instructions <br />
+Provider Information Survey <br />
+Provider Certification Statement -->
+
+        </p>
+    </body>
+
+    </html>
+</apex:page>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Activity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Activity Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Compile Audit Findings</fullName>
+                <default>false</default>
+                <label>Compile Audit Findings</label>
+            </value>
+            <value>
+                <fullName>Confirm Credit Balance</fullName>
+                <default>false</default>
+                <label>Confirm Credit Balance</label>
+            </value>
+            <value>
+                <fullName>Contact Provider</fullName>
+                <default>false</default>
+                <label>Contact Provider</label>
+            </value>
+            <value>
+                <fullName>Dispose Case</fullName>
+                <default>false</default>
+                <label>Dispose Case</label>
+            </value>
+            <value>
+                <fullName>Identify Samples for Audit</fullName>
+                <default>false</default>
+                <label>Identify Samples for Audit</label>
+            </value>
+            <value>
+                <fullName>Perform Audit</fullName>
+                <default>false</default>
+                <label>Perform Audit</label>
+            </value>
+            <value>
+                <fullName>Perform Detailed Risk Assessment</fullName>
+                <default>false</default>
+                <label>Perform Detailed Risk Assessment</label>
+            </value>
+            <value>
+                <fullName>Perform Initial Risk Assessment</fullName>
+                <default>false</default>
+                <label>Perform Initial Risk Assessment</label>
+            </value>
+            <value>
+                <fullName>Perform Provider &amp; Claims data research</fullName>
+                <default>false</default>
+                <label>Perform Provider &amp; Claims data research</label>
+            </value>
+            <value>
+                <fullName>Perform Review</fullName>
+                <default>false</default>
+                <label>Perform Review</label>
+            </value>
+            <value>
+                <fullName>Prepare Addendum – A for Provider</fullName>
+                <default>false</default>
+                <label>Prepare Addendum – A for Provider</label>
+            </value>
+            <value>
+                <fullName>Receive and Track Credit Balance</fullName>
+                <default>false</default>
+                <label>Receive and Track Credit Balance</label>
+            </value>
+            <value>
+                <fullName>Receive Document</fullName>
+                <default>false</default>
+                <label>Receive Document</label>
+            </value>
+            <value>
+                <fullName>Request for Document (Addendum-A)</fullName>
+                <default>false</default>
+                <label>Request for Document (Addendum-A)</label>
+            </value>
+            <value>
+                <fullName>Schedule Audit</fullName>
+                <default>false</default>
+                <label>Schedule Audit</label>
+            </value>
+            <value>
+                <fullName>Send Demand Letter</fullName>
+                <default>false</default>
+                <label>Send Demand Letter</label>
+            </value>
+            <value>
+                <fullName>Verify Provider Billing Issues</fullName>
+                <default>false</default>
+                <label>Verify Provider Billing Issues</label>
+            </value>
+            <value>
+                <fullName>Perform Site Audit</fullName>
+                <default>false</default>
+                <label>Perform Site Audit</label>
+            </value>
+            <value>
+                <fullName>Provider on-Hold</fullName>
+                <default>false</default>
+                <label>Provider on-Hold</label>
+            </value>
+            <value>
+                <fullName>Test Activity 1</fullName>
+                <default>false</default>
+                <label>Test Activity 1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hold_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Hold Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PI Findings</fullName>
+                <default>false</default>
+                <label>PI Findings</label>
+            </value>
+            <value>
+                <fullName>Administrative Action</fullName>
+                <default>false</default>
+                <label>Administrative Action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

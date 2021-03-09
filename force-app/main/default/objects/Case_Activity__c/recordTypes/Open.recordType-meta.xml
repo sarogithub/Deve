@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open</fullName>
+    <active>true</active>
+    <label>Open</label>
+    <picklistValues>
+        <picklist>Activity_Business_Status__c</picklist>
+        <values>
+            <fullName>Activity Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrative Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Findings Documented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Findings In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Not Performed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Audit Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Referral %E2%80%93 Administrative Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Referral - Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Risk Score %E2%80%93 High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Risk Score %E2%80%93 Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Risk Score %E2%80%93 Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed Risk Score %E2%80%93 Not Determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Risk Score %E2%80%93 High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Risk Score %E2%80%93 Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Risk Score %E2%80%93 Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Need Further Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Major Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sampling Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sampling In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduling In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Perform Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Schedule</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Activity_Owner__c</picklist>
+        <values>
+            <fullName>PI User2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI User3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI User4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Susan M</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Activity_Type__c</picklist>
+        <values>
+            <fullName>Receive Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verify Provider Billing Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Credit_Balance_Recoupment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider_Audit_Onsite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Type__c</picklist>
+        <values>
+            <fullName>Lab Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prior Auth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hold_Reason__c</picklist>
+        <values>
+            <fullName>Administrative Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI Findings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sampling_Method__c</picklist>
+        <values>
+            <fullName>100%25 Audit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
