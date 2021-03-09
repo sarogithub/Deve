@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sampling_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Sampling Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Random Sample</fullName>
+                <default>false</default>
+                <label>Random Sample</label>
+            </value>
+            <value>
+                <fullName>Targeted Sample</fullName>
+                <default>false</default>
+                <label>Targeted Sample</label>
+            </value>
+            <value>
+                <fullName>100% Audit</fullName>
+                <default>false</default>
+                <label>100% Audit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

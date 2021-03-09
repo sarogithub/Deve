@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Business_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Activity Business Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activity Not Applicable</fullName>
+                <default>false</default>
+                <label>Activity Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Administrative Action</fullName>
+                <default>false</default>
+                <label>Administrative Action</label>
+            </value>
+            <value>
+                <fullName>Audit Completed</fullName>
+                <default>false</default>
+                <label>Audit Completed</label>
+            </value>
+            <value>
+                <fullName>Audit Findings Documented</fullName>
+                <default>false</default>
+                <label>Audit Findings Documented</label>
+            </value>
+            <value>
+                <fullName>Audit Findings In Progress</fullName>
+                <default>false</default>
+                <label>Audit Findings In Progress</label>
+            </value>
+            <value>
+                <fullName>Audit Not Performed</fullName>
+                <default>false</default>
+                <label>Audit Not Performed</label>
+            </value>
+            <value>
+                <fullName>Audit Scheduled</fullName>
+                <default>false</default>
+                <label>Audit Scheduled</label>
+            </value>
+            <value>
+                <fullName>Case Referral – Administrative Action</fullName>
+                <default>false</default>
+                <label>Case Referral – Administrative Action</label>
+            </value>
+            <value>
+                <fullName>Case Referral – Credit Balance</fullName>
+                <default>false</default>
+                <label>Case Referral – Credit Balance</label>
+            </value>
+            <value>
+                <fullName>Case Referral – Provider Audit</fullName>
+                <default>false</default>
+                <label>Case Referral – Provider Audit</label>
+            </value>
+            <value>
+                <fullName>Case Referral - Recovery</fullName>
+                <default>false</default>
+                <label>Case Referral – Recovery</label>
+            </value>
+            <value>
+                <fullName>Close Case</fullName>
+                <default>false</default>
+                <label>Close Case</label>
+            </value>
+            <value>
+                <fullName>Contact Successful</fullName>
+                <default>false</default>
+                <label>Contact Successful</label>
+            </value>
+            <value>
+                <fullName>Contact Unsuccessful</fullName>
+                <default>false</default>
+                <label>Contact Unsuccessful</label>
+            </value>
+            <value>
+                <fullName>Credit Balance Not Verified</fullName>
+                <default>false</default>
+                <label>Credit Balance Not Verified</label>
+            </value>
+            <value>
+                <fullName>Credit Balance Reported</fullName>
+                <default>false</default>
+                <label>Credit Balance Reported</label>
+            </value>
+            <value>
+                <fullName>Credit Balance Verified</fullName>
+                <default>false</default>
+                <label>Credit Balance Verified</label>
+            </value>
+            <value>
+                <fullName>Credit Balance Worksheet Review</fullName>
+                <default>false</default>
+                <label>Credit Balance Worksheet Review</label>
+            </value>
+            <value>
+                <fullName>Detailed Risk Score – High</fullName>
+                <default>false</default>
+                <label>Detailed Risk Score – High</label>
+            </value>
+            <value>
+                <fullName>Detailed Risk Score – Low</fullName>
+                <default>false</default>
+                <label>Detailed Risk Score – Low</label>
+            </value>
+            <value>
+                <fullName>Detailed Risk Score – Medium</fullName>
+                <default>false</default>
+                <label>Detailed Risk Score – Medium</label>
+            </value>
+            <value>
+                <fullName>Detailed Risk Score – Not Determined</fullName>
+                <default>false</default>
+                <label>Detailed Risk Score – Not Determined</label>
+            </value>
+            <value>
+                <fullName>Document Attempt Unsuccessful</fullName>
+                <default>false</default>
+                <label>Document Attempt Unsuccessful</label>
+            </value>
+            <value>
+                <fullName>Document Incomplete</fullName>
+                <default>false</default>
+                <label>Document Incomplete</label>
+            </value>
+            <value>
+                <fullName>Document In Progress</fullName>
+                <default>false</default>
+                <label>Document In Progress</label>
+            </value>
+            <value>
+                <fullName>Document Not Received</fullName>
+                <default>false</default>
+                <label>Document Not Received</label>
+            </value>
+            <value>
+                <fullName>Document Prepared</fullName>
+                <default>false</default>
+                <label>Document Prepared</label>
+            </value>
+            <value>
+                <fullName>Document Received</fullName>
+                <default>false</default>
+                <label>Document Received</label>
+            </value>
+            <value>
+                <fullName>Document Request Completed</fullName>
+                <default>false</default>
+                <label>Document Request Completed</label>
+            </value>
+            <value>
+                <fullName>Document Request Verified</fullName>
+                <default>false</default>
+                <label>Document Request Verified</label>
+            </value>
+            <value>
+                <fullName>Document Verified</fullName>
+                <default>false</default>
+                <label>Document Verified</label>
+            </value>
+            <value>
+                <fullName>Initial Risk Score – High</fullName>
+                <default>false</default>
+                <label>Initial Risk Score – High</label>
+            </value>
+            <value>
+                <fullName>Initial Risk Score – Low</fullName>
+                <default>false</default>
+                <label>Initial Risk Score – Low</label>
+            </value>
+            <value>
+                <fullName>Initial Risk Score – Medium</fullName>
+                <default>false</default>
+                <label>Initial Risk Score – Medium</label>
+            </value>
+            <value>
+                <fullName>Need Further Review</fullName>
+                <default>false</default>
+                <label>Need Further Review</label>
+            </value>
+            <value>
+                <fullName>No Major Findings</fullName>
+                <default>false</default>
+                <label>No Major Findings</label>
+            </value>
+            <value>
+                <fullName>No Provider Billing Issues</fullName>
+                <default>false</default>
+                <label>No Provider Billing Issues</label>
+            </value>
+            <value>
+                <fullName>Provider Billing Issues Noted</fullName>
+                <default>false</default>
+                <label>Provider Billing Issues Noted</label>
+            </value>
+            <value>
+                <fullName>Recoupment</fullName>
+                <default>false</default>
+                <label>Recoupment</label>
+            </value>
+            <value>
+                <fullName>Referred</fullName>
+                <default>false</default>
+                <label>Referred</label>
+            </value>
+            <value>
+                <fullName>Sampling Completed</fullName>
+                <default>false</default>
+                <label>Sampling Completed</label>
+            </value>
+            <value>
+                <fullName>Sampling In Progress</fullName>
+                <default>false</default>
+                <label>Sampling In Progress</label>
+            </value>
+            <value>
+                <fullName>Scheduling In Progress</fullName>
+                <default>false</default>
+                <label>Scheduling In Progress</label>
+            </value>
+            <value>
+                <fullName>Unable to Perform Audit</fullName>
+                <default>false</default>
+                <label>Unable to Perform Audit</label>
+            </value>
+            <value>
+                <fullName>Unable to Schedule</fullName>
+                <default>false</default>
+                <label>Unable to Schedule</label>
+            </value>
+            <value>
+                <fullName>Reviewed and accepted</fullName>
+                <default>false</default>
+                <label>Reviewed and accepted</label>
+            </value>
+            <value>
+                <fullName>Mutually agreed</fullName>
+                <default>false</default>
+                <label>Mutually agreed</label>
+            </value>
+            <value>
+                <fullName>No Suspicious Activity</fullName>
+                <default>false</default>
+                <label>No Suspicious Activity</label>
+            </value>
+            <value>
+                <fullName>Findings Documented</fullName>
+                <default>false</default>
+                <label>Findings Documented</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

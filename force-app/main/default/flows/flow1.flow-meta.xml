@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <name>first_decision</name>
+        <label>first decision</label>
+        <locationX>459</locationX>
+        <locationY>91</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>decision_op</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>captur_finding</leftValueReference>
+                <operator>WasVisited</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>step2</targetReference>
+            </connector>
+            <label>decision op</label>
+        </rules>
+    </decisions>
+    <interviewLabel>flow1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>flow1</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>captur_finding</name>
+        <label>captur  finding</label>
+        <locationX>303</locationX>
+        <locationY>49</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>f1</name>
+            <dataType>String</dataType>
+            <fieldText>f1</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>f2</name>
+            <dataType>Number</dataType>
+            <fieldText>f2</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>screen2</name>
+        <label>screen2</label>
+        <locationX>331</locationX>
+        <locationY>224</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ta</name>
+            <fieldText>ta</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>step2</startElementReference>
+    <status>InvalidDraft</status>
+    <steps>
+        <name>step2</name>
+        <label>step2</label>
+        <locationX>137</locationX>
+        <locationY>217</locationY>
+        <connectors>
+            <targetReference>screen2</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <description>sample</description>
+        <name>trial_flow</name>
+        <label>trial flow</label>
+        <locationX>135</locationX>
+        <locationY>51</locationY>
+        <connectors>
+            <targetReference>captur_finding</targetReference>
+        </connectors>
+    </steps>
+</Flow>

@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Docuemnt_Not_Received</fullName>
+        <ccEmails>soundarp@orbitinnovations.com</ccEmails>
+        <description>Docuemnt  Not Received</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Provider_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>eCare_Doc/Document_Not_Received</template>
+    </alerts>
+    <alerts>
+        <fullName>Document_request</fullName>
+        <ccEmails>ananth.kt@ecare-innovations.com,cecilsamuel@gmail.com</ccEmails>
+        <description>Document request</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>eCare_Doc/Notification_for_Request_for_document</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_for_Review_of_Document</fullName>
+        <ccEmails>ananth.kt@ecare-innovations.com</ccEmails>
+        <description>Email alert for Review of Document</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>ak@ecare.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>eCare_Doc/Notification_for_Request_for_document</template>
+    </alerts>
+    <alerts>
+        <fullName>Escalation_Email</fullName>
+        <description>Escalation Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_for_activity_due_date_before_3_days</fullName>
+        <ccEmails>ananth.kt@ecare-innovations.com</ccEmails>
+        <description>Notification for activity due date before 3 days</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ak@ecare.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>eCare_Doc/Activity_due_date_alert</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Activity_Start_Date_Update</fullName>
+        <field>Activity_Start_Date__c</field>
+        <formula>Today()</formula>
+        <name>Activity Start Date Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Type_Update</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Provider Audit-Desktop</literalValue>
+        <name>Case Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Case_Type_Update_For_Perform_Review</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Provider Audit-Desktop</literalValue>
+        <name>Case Type Update For Perform Review</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Compile_Audit_Findings</fullName>
+        <description>Compile Audit Findings  _  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Compile_Audit_Findings</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Compile Audit Findings</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Confirm_Credit_Balance</fullName>
+        <description>Confirm Credit Balance_ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Confirm_Credit_Balance</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Confirm Credit Balance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Provider</fullName>
+        <description>Contact Provider_ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Contact_Provider</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Contact Provider</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Provider_Casse_Type_Update</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Provider Audit-Desktop</literalValue>
+        <name>Contact Provider Casse Type Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Contact_Provider_Update</fullName>
+        <description>Contact Provider _ Record Type</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Contact_Provider</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Contact Provider</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dispose_Case</fullName>
+        <description>Dispose Case _ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Dispose_Case</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Dispose Case</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Identify_Samples_for_Audit</fullName>
+        <description>Identify Samples for Audit_  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Identify_Samples_for_Audit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Identify Samples for Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_Audit</fullName>
+        <description>Perform Audit  _  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Perform_Audit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Perform Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_Detailed_Risk_Assessment</fullName>
+        <description>Perform Detailed Risk Assessment _  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Perform_Detailed_Risk_Assessment</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Perform Detailed Risk Assessment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_Initial_Risk_Assessment</fullName>
+        <description>Perform Initial Risk Assessment _  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Perform_Initial_Risk_Assessment</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Perform Initial Risk Assessment</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_Provider_Claims_Data_Research</fullName>
+        <description>Perform Provider &amp; Claims Data Research   _ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Perform_Provider_Claims_Data_Research</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Perform Provider &amp; Claims Data Research</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_site_Audit</fullName>
+        <description>Perform site Audit _ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Perform_site_Audit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Perform site Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Perform_site_Audit_Case_Update</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Provider Audit-Desktop</literalValue>
+        <name>Perform site Audit Case Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Prepare_Addendum_A_for_Provider</fullName>
+        <description>Prepare Addendum-A for Provider _  RecordType Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Prepare_Addendum_A_for_Provider</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Prepare Addendum-A for Provider</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Provider_on_Hold_Case_Update</fullName>
+        <field>Case_Type__c</field>
+        <literalValue>Provider Audit-Desktop</literalValue>
+        <name>Provider on-Hold Case Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Receive_And_Track_Credit_Balance</fullName>
+        <description>Receive And Track Credit Balance _ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Receive_Track_Credit_Balance</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Receive And Track Credit Balance</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Receive_Document</fullName>
+        <description>Receive Document _ RecordType Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Receive_Document</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Receive Document</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Request_for_Document</fullName>
+        <description>Credit Balance Reporting _ Request for Document</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Request_for_Document</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Request for Document</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Request_for_Documentation</fullName>
+        <description>Request for Documentation _ Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Request_for_Document</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Request for Documentation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Schedule_Audit</fullName>
+        <description>Schedule Audit _  Record Type Update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Schedule_Audit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Schedule Audit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Test_Activity_1_Record_Type_Updation</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Test_Activity_1</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Test Activity 1 Record Type Updation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Case_Status_to_Inprogres</fullName>
+        <field>Status</field>
+        <literalValue>In_Progress</literalValue>
+        <name>Update Case Status to Inprogres</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>Case__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Schedule_Audit</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Update Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Verify_Provider_Billing_Issues</fullName>
+        <description>Verify Provider Billing Issues _  Record Type update</description>
+        <field>RecordTypeId</field>
+        <lookupValue>Verify_Provider_Billing_Issues</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Verify Provider Billing Issues</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>A1%3A Perform Provider %26 Claims Data Research</fullName>
+        <actions>
+            <name>Perform_Provider_Claims_Data_Research</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform Provider &amp; Claims Data Research</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A1%3A Prepare Addendum-A for Provider</fullName>
+        <actions>
+            <name>Prepare_Addendum_A_for_Provider</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Prepare Addendum-A for Provider</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A2%3A  Request for Document</fullName>
+        <actions>
+            <name>Request_for_Document</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Request for Document</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A2%3A Perform Initial Risk Assessment</fullName>
+        <actions>
+            <name>Perform_Initial_Risk_Assessment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform Initial Risk Assessment</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A3 %3A Perform Detailed Risk Assessment</fullName>
+        <actions>
+            <name>Perform_Detailed_Risk_Assessment</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform Detailed Risk Assessment</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A3%3AReceive Document</fullName>
+        <actions>
+            <name>Receive_Document</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Receive Document</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A4 %3A Identify Samples for Audit</fullName>
+        <actions>
+            <name>Identify_Samples_for_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Identify Samples for Audit</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A4 %3A Receive %26 Track Credit Balance</fullName>
+        <actions>
+            <name>Receive_And_Track_Credit_Balance</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Receive And Track Credit Balance</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A5 %3A Contact Provider</fullName>
+        <actions>
+            <name>Contact_Provider</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Contact Provider</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A5 %3ASchedule Audit</fullName>
+        <actions>
+            <name>Schedule_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Schedule Audit</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A6 %3A Perform Audit</fullName>
+        <actions>
+            <name>Perform_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform Audit</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A6%3A  Confirm Credit Balance</fullName>
+        <actions>
+            <name>Confirm_Credit_Balance</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Confirm Credit Balance</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A7 %3A Verify Provider Billing Issues</fullName>
+        <actions>
+            <name>Verify_Provider_Billing_Issues</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Verify Provider Billing Issues</value>
+        </criteriaItems>
+        <description>Credit Balance Reporting</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>A7%3A Compile Audit Findings</fullName>
+        <actions>
+            <name>Compile_Audit_Findings</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Compile Audit Findings</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Activity Start Date Update</fullName>
+        <actions>
+            <name>Activity_Start_Date_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Activity Start Date Updating</description>
+        <formula>AND(NOT(ISNEW()), (ISNULL( Activity_Start_Date__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Contact Provider</fullName>
+        <actions>
+            <name>Contact_Provider_Casse_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Contact_Provider_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Contact Provider</value>
+        </criteriaItems>
+        <description>Provider Audit-Desktop</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Create Task for-Schedule Onsite Audit</fullName>
+        <actions>
+            <name>Update_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Onsite_Visit</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Case_Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Schedule Audit</value>
+        </criteriaItems>
+        <description>If it is Schedule Audit, Create Task for Reminder and change the record type to Schedule Audit</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Dispose Case</fullName>
+        <actions>
+            <name>Dispose_Case</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Dispose Case</value>
+        </criteriaItems>
+        <description>Provider Audit-Onsite &amp; Credit Balance Reporting -  Dispose Case</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Document Not Received</fullName>
+        <actions>
+            <name>Docuemnt_Not_Received</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Document_Not_Received</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Activity_Business_Status__c</field>
+            <operation>equals</operation>
+            <value>Document Not Received</value>
+        </criteriaItems>
+        <description>Document Not Received</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Perform Review</fullName>
+        <actions>
+            <name>Case_Type_Update_For_Perform_Review</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform Review</value>
+        </criteriaItems>
+        <description>Provider Audit-Desktop</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Perform site Audit</fullName>
+        <actions>
+            <name>Perform_site_Audit</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Perform_site_Audit_Case_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Perform site Audit</value>
+        </criteriaItems>
+        <description>Provider Audit-Desktop</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Process Audit OnSite_RequestForDocument</fullName>
+        <actions>
+            <name>Document_request</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case_Activity__c.Case_Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Request for Document (Addendum-A)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case_Activity__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Request for Document</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Provider Audit-Onsite,Provider Audit New</value>
+        </criteriaItems>
+        <description>Sends email alert after 10 days of the activity created date.</description>
+        <triggerType>onCreateOnly</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Case_Activity__c.CreatedDate</offsetFromField>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Provider on-Hold</fullName>
+        <actions>
+            <name>Provider_on_Hold_Case_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Provider on-Hold</value>
+        </criteriaItems>
+        <description>Provider Audit-Desktop</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Request for Documentation</fullName>
+        <actions>
+            <name>Case_Type_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Request_for_Documentation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Request for Documentation</value>
+        </criteriaItems>
+        <description>Provider Audit-Desktop</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Test Activity 1</fullName>
+        <actions>
+            <name>Test_Activity_1_Record_Type_Updation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Name</field>
+            <operation>equals</operation>
+            <value>Test Activity 1</value>
+        </criteriaItems>
+        <description>Test Activity 1</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WR01 - Case Activity Due Date alert</fullName>
+        <actions>
+            <name>Notification_for_activity_due_date_before_3_days</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Case_Activity__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case_Activity__c.Activity_Due_Date__c</field>
+            <operation>equals</operation>
+            <value>NEXT 3 DAYS</value>
+        </criteriaItems>
+        <description>Sends email alert three days before due date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <offsetFromField>Case_Activity__c.Activity_Due_Date__c</offsetFromField>
+            <timeLength>-3</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>WR01-Case Activity</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Case_Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Perform Provider &amp; Claims data research,Perform Initial Risk Assessment,Perform Detailed Risk Assessment,Identify Samples for Audit,Perform Audit,Compile Audit Findings</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case_Activity__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started</value>
+        </criteriaItems>
+        <description>Set reminder for due day</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_alert_for_Review_of_Document</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case_Activity__c.Activity_Due_Date__c</offsetFromField>
+            <timeLength>10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Update_Case_Status_to_Inprogres</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Case_Activity__c.CreatedDate</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>WR04- Case Activity_Onsite Audit</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Case_Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Schedule Onsite Audit</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WR04- Case Activity_Sample Audit</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case_Activity__c.Case_Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Identify Samples for Audit</value>
+        </criteriaItems>
+        <description>If it is Identify Samples for Audit Activity, Change the record type to Sample Audit RecType</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Case_Activity_Event</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case_Activity__c.Activity_End_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Case Activity Event</subject>
+    </tasks>
+    <tasks>
+        <fullName>Document_Not_Received</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Hi , 
+
+Document is not received for the below case.  kindly do the needful. 
+
+
+Thank You !!</description>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case_Activity__c.Activity_Start_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Document Not Received</subject>
+    </tasks>
+    <tasks>
+        <fullName>Onsite_Visit</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>-3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Case_Activity__c.Activity_Start_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Onsite Visit</subject>
+    </tasks>
+</Workflow>

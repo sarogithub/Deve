@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CB_60_days_Alert</fullName>
+        <description>Credit Balance 60 days Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ak@ecare.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>eCare_Doc/Activity_due_date_alert</template>
+    </alerts>
+    <rules>
+        <fullName>Cb_60_day</fullName>
+        <actions>
+            <name>CB_60_days_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.CreatedDate</field>
+            <operation>equals</operation>
+            <value>NEXT 60 DAYS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>On-Hold,Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Status based update</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Referrals,Provider Audit-Onsite,Credit – Balance Recoupment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Case_Business_Status__c</field>
+            <operation>equals</operation>
+            <value>Case Referred</value>
+        </criteriaItems>
+        <description>Status based update</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

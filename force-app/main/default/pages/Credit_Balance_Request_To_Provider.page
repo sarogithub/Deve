@@ -1,0 +1,23 @@
+<apex:page renderAs="PDF">
+<html>
+<!--
+<p>
+<apex:image value="{!URLFOR($Resource.Credit_Balance_Logo_1)}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<apex:image value="{!URLFOR($Resource.Credit_Balance_Logo_2)}"/>
+</p> 
+-->
+<table border="0" width="100%">
+<tr>
+<td>
+<apex:image value="{!URLFOR($Resource.Credit_Balance_Logo_1)}" width="220" height="55"/>
+</td>
+<td>
+<apex:image value="{!URLFOR($Resource.Credit_Balance_Logo_2)}" />
+</td>
+</tr>
+</table>
+</html>
+</apex:page>
