@@ -1,0 +1,44 @@
+<apex:page showHeader="false" standardStylesheets="false"
+    standardController="Case" extensions="documentTemplateSample"
+    contentType="{! renderedContentType }" renderAs="{! renderingService }">
+        
+    <apex:form rendered="{! renderingService != 'PDF' }"
+               style="text-align: right; margin: 10px;">
+        <apex:commandLink action="{! saveToPdf }" value="Save to PDF">
+            <apex:param assignTo="{! renderedFileName }" value="Case-Document.pdf"/>
+        </apex:commandLink>
+        <hr/>
+    </apex:form>
+    
+    <h1>Letter of Correspondence for {!Case.Case_Name__c}</h1>
+    <hr/>
+
+    <p> <b> Date </b> : 
+        <apex:outputText value=" {0,date,M/d/yyy}">  
+        <apex:param value="{!NOW()}"/>  
+    </apex:outputText>
+    </p>
+    <p> <b> To </b> : {!csDetails.Contact.Name} </p>
+    <p> <b> Subject/Description </b> : {!Case.Description} </p>
+
+    <p> <b> Dear Provider, </b> </p>
+
+    <p>This correspondence is with regard to the on-site audit that is planned at your location in the near
+        future. All pre-audit documents are to be submitted before <b><apex:outputText value=" {0,date,M/d/yyy}">  
+            <apex:param value="{!Case.Start_Date__c}"/>  
+        </apex:outputText></b>  to and will henceforth be
+        handled by the <b>{!csDetails.Owner.Name}</b>. The day of the audit will be decided and communicated to you upon
+        verification of the aforementioned documents.
+    </p>
+    
+    <p>
+        Looking forward to working with you.
+    </p>
+
+    <p> <b> Best Regards </b> </p>
+    <p> {!csDetails.Owner.Name} </p>
+    <!-- A little bit of info about the page's rendering; 
+         see how it changes when saved as a PDF. 
+    contentType: <apex:outputText value=" {! renderedContentType }"/><br/>
+    renderingService: <apex:outputText value=" {! renderingService }"/><br/>-->
+</apex:page>
