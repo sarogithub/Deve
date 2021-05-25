@@ -72,5 +72,9 @@
         <members>*</members>
         <name>FlowDefinition</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>FlexiPages</name>
+    </types>
     <version>49.0</version>
 </Package>
