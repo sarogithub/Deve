@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChangeTheStatusToPaid</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISPICKVAL(Status__c,&apos;Paid&apos;)),NOT(ISBLANK(Received_Amount__c)))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Update the status to &quot;paid&quot;</errorMessage>
+</ValidationRule>
