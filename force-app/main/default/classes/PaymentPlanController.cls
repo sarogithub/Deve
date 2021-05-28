@@ -8,7 +8,7 @@ public with sharing class PaymentPlanController {
             Map<String, Object> output = new Map<String, Object>();
             String dontAllowUsertoCreateOrUpdatePPD = 'false';
 
-            Case caseRec = [SELECT Id, Payment_Plan__c, PP_Begin_Date__c, Total_PP_Amount__c, PP_Type__c, 
+            Case caseRec = [SELECT Id, Payment_Plan__c, PP_Begin_Date__c, Total_PP_Amount__c, PP_Type__c, PP_Begin_Date_Backup__c,
                             No_Of_Installment__c, No_Of_Installment_Backup__c, PP_Type_Backup__c, Total_PP_Amount_Backup__c     
                             FROM Case WHERE Id =: recordId];
             output.put('caseDetails', caseRec);
@@ -133,13 +133,15 @@ public with sharing class PaymentPlanController {
             Decimal noOfInstallment;
             String ppType;
             Decimal totalPPAmount;
+            Date ppBeginDate;
             Id caseId;
 
             if(parsedInputParams.get('totalPPAmtChange') == 'true'){
                 List<Payment_Plan_Detail__c> updatePPD = new List<Payment_Plan_Detail__c>();
                 for(Payment_Plan_Detail__c ppdRec : [SELECT Id, Amount_to_Repaid__c, Comments__c, 
                                                     Installment__c, Payment_Due_Date__c, Received_Amount__c, Status__c, Case__r.Id,
-                                                    Case__r.No_Of_Installment__c, Case__r.Total_PP_Amount__c, Case__r.PP_Type__c
+                                                    Case__r.No_Of_Installment__c, Case__r.Total_PP_Amount__c, Case__r.PP_Type__c,
+                                                    Case__r.PP_Begin_Date__c
                                                     FROM Payment_Plan_Detail__c WHERE Case__c =: parsedInputParams.get('caseId')]){
                     ppdRec.Status__c = 'Yet to Pay';
 
@@ -150,13 +152,15 @@ public with sharing class PaymentPlanController {
                     ppType = ppdRec.Case__r.PP_Type__c;
                     noOfInstallment = ppdRec.Case__r.No_Of_Installment__c;
                     totalPPAmount = ppdRec.Case__r.Total_PP_Amount__c;
+                    ppBeginDate = ppdRec.Case__r.PP_Begin_Date__c;
                 }
                 
                 Case cs = new Case(
                     Id = caseId,
                     PP_Type_Backup__c = ppType,
                     No_Of_Installment_Backup__c = noOfInstallment, 
-                    Total_PP_Amount_Backup__c = totalPPAmount
+                    Total_PP_Amount_Backup__c = totalPPAmount,
+                    PP_Begin_Date_Backup__c = ppBeginDate
                 );
 
                 if(updatePPD.size() > 0){
@@ -170,13 +174,14 @@ public with sharing class PaymentPlanController {
                 Case__r.No_Of_Installment__c, Case__r.Total_PP_Amount__c   
                 FROM Payment_Plan_Detail__c WHERE Case__c =: parsedInputParams.get('caseId')];
 
-                Case caseRec = [SELECT Id, Payment_Plan__c, PP_Begin_Date__c, Total_PP_Amount__c, PP_Type__c, 
+                Case caseRec = [SELECT Id, Payment_Plan__c, PP_Begin_Date__c, Total_PP_Amount__c, PP_Type__c, PP_Begin_Date_Backup__c,
                                 No_Of_Installment__c, No_Of_Installment_Backup__c, PP_Type_Backup__c, Total_PP_Amount_Backup__c     
                                 FROM Case WHERE Id =: parsedInputParams.get('caseId')];
 
                 caseRec.PP_Type_Backup__c = caseRec.PP_Type__c;
                 caseRec.No_Of_Installment_Backup__c = caseRec.No_Of_Installment__c; 
                 caseRec.Total_PP_Amount_Backup__c = caseRec.Total_PP_Amount__c;
+                caseRec.PP_Begin_Date_Backup__c = caseRec.PP_Begin_Date__c;
 
                 ppdCreationOutput.put('status', 'Success');
                 ppdCreationOutput = PaymentPlanCreate(caseRec);

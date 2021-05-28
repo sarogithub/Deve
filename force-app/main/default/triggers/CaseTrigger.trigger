@@ -10,6 +10,7 @@ trigger CaseTrigger on Case (after insert, after update, before update, before i
                 cs.No_Of_Installment_Backup__c = cs.No_Of_Installment__c;
                 cs.PP_Type_Backup__c = cs.PP_Type__c; 
                 cs.Total_PP_Amount_Backup__c = cs.Total_PP_Amount__c;
+                cs.PP_Begin_Date_Backup__c = cs.PP_Begin_Date__c;
             }
         }
     }
@@ -34,6 +35,12 @@ trigger CaseTrigger on Case (after insert, after update, before update, before i
                     || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c 
                     && cs.Total_PP_Amount_Backup__c == null)){
                     cs.Total_PP_Amount_Backup__c = cs.Total_PP_Amount__c;
+                }
+                if((Trigger.OldMap.get(cs.Id).PP_Begin_Date__c != cs.PP_Begin_Date__c
+                    && Trigger.OldMap.get(cs.Id).PP_Begin_Date__c == null)
+                    || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c 
+                    && cs.PP_Begin_Date_Backup__c == null)){
+                    cs.PP_Begin_Date_Backup__c = cs.PP_Begin_Date__c;
                 }
             }
         }

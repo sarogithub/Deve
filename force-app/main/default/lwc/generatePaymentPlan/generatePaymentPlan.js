@@ -124,11 +124,14 @@ export default class GeneratePaymentPlan extends LightningElement {
         this.isValid = false;
 
         if((this.caseDetail.PP_Type_Backup__c != this.caseDetail.PP_Type__c || 
-            this.caseDetail.No_Of_Installment_Backup__c != this.caseDetail.No_Of_Installment__c)
+            this.caseDetail.No_Of_Installment_Backup__c != this.caseDetail.No_Of_Installment__c || 
+            this.caseDetail.PP_Begin_Date_Backup__c != this.caseDetail.PP_Begin_Date__c)
             && typeof this.caseDetail.PP_Type_Backup__c != 'undefined' 
             && typeof this.caseDetail.No_Of_Installment_Backup__c != 'undefined'
+            && typeof this.caseDetail.PP_Begin_Date_Backup__c != 'undefined'
             && this.caseDetail.PP_Type_Backup__c != null
-            && this.caseDetail.No_Of_Installment_Backup__c != null) {
+            && this.caseDetail.No_Of_Installment_Backup__c != null
+            && this.caseDetail.PP_Begin_Date_Backup__c != null) {
                 this.PPTypeOrNoOfInstallmentChange = true;
         }else if(this.caseDetail.Total_PP_Amount_Backup__c != this.caseDetail.Total_PP_Amount__c && 
             typeof this.caseDetail.Total_PP_Amount_Backup__c != 'undefined' && 
@@ -137,7 +140,7 @@ export default class GeneratePaymentPlan extends LightningElement {
         }
 
         if(this.PPTypeOrNoOfInstallmentChange){
-            this.popUpMessage = 'PP Type or No Of Installment is changed, so system will regenerate the Payment Plan Details. Existing records will be deleted';
+            this.popUpMessage = 'PP Type or No Of Installment or PP Begin Date is changed, so system will regenerate the Payment Plan Details. Existing records will be deleted';
             this.title = 'Delete Existing Payment Plan Detail';
             this.functionality = 'UpdatePPD';
             this.showModal = true;
