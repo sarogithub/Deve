@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SupervisorApprovalisNeedforActivitCompl</fullName>
+    <active>true</active>
+    <description>Supervisor Approval is Need for Activity Completion</description>
+    <errorConditionFormula>AND(NOT(ISPICKVAL(Supervisor_Approval_Status__c,&apos;Approved&apos;)),ISPICKVAL(Status__c,&apos;Completed&apos;),OR(ISPICKVAL(Case_Activity_Type__c,&apos;Identify Samples &amp; Methodology for Audit&apos;), ISPICKVAL(Case_Activity_Type__c,&apos;Determine Provider Actions&apos;), ISPICKVAL(Case_Activity_Type__c,&apos;Dispose Case&apos;)))</errorConditionFormula>
+    <errorMessage>You are not allowed to complete the case without supervisor approval</errorMessage>
+</ValidationRule>
