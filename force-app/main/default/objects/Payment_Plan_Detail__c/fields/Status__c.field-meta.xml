@@ -21,6 +21,11 @@
                 <default>false</default>
                 <label>Paid</label>
             </value>
+            <value>
+                <fullName>Partially Paid</fullName>
+                <default>false</default>
+                <label>Partially Paid</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

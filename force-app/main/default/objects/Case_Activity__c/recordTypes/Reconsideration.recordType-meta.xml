@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reconsideration</fullName>
+    <active>true</active>
+    <label>Reconsideration</label>
+    <picklistValues>
+        <picklist>Activity_Business_Status__c</picklist>
+        <values>
+            <fullName>Activity Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Not Granted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remit Payment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Activity_Owner__c</picklist>
+        <values>
+            <fullName>PI User2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI User3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI User4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Susan M</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Activity_Type__c</picklist>
+        <values>
+            <fullName>Compile Audit Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispose Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify Samples for Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Detailed Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Initial Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Site Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare Addendum %E2%80%93 A for Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider on-Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive and Track Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Document %28Addendum-A%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Demand Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Activity 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verify Provider Billing Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Type__c</picklist>
+        <values>
+            <fullName>Credit_Balance_Recoupment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid PI Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Audit-Desktop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider_Audit_Onsite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Document_Type__c</picklist>
+        <values>
+            <fullName>Lab Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prior Auth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Hold_Reason__c</picklist>
+        <values>
+            <fullName>Administrative Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PI Findings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sampling_Method__c</picklist>
+        <values>
+            <fullName>100%25 Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Random Sample</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Targeted Sample</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

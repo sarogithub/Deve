@@ -7,6 +7,10 @@
     <picklistValues>
         <picklist>Activity_Business_Status__c</picklist>
         <values>
+            <fullName>Activity Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Need Further Review</fullName>
             <default>false</default>
         </values>
@@ -69,7 +73,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Perform Provider %26 Claims data research</fullName>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
             <default>false</default>
         </values>
         <values>
@@ -104,12 +108,12 @@
     <picklistValues>
         <picklist>Case_Type__c</picklist>
         <values>
-            <fullName>Credit_Balance_Recoupment</fullName>
+            <fullName>Medicaid PI Audit</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Provider_Audit_Onsite</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -163,8 +167,27 @@
             <fullName>Not Started</fullName>
             <default>false</default>
         </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
             <default>false</default>
         </values>
     </picklistValues>

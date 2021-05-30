@@ -7,31 +7,27 @@
     <picklistValues>
         <picklist>Activity_Business_Status__c</picklist>
         <values>
-            <fullName>Case Referral %E2%80%93 Administrative Action</fullName>
+            <fullName>Activity Not Applicable</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Case Referral %E2%80%93 Credit Balance</fullName>
+            <fullName>No Major Findings</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Case Referral %E2%80%93 Provider Audit</fullName>
+            <fullName>No Overpayment</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Case Referral - Recovery</fullName>
+            <fullName>Overpayment Recovered</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Close Case</fullName>
+            <fullName>Overpayment Remitted</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Recoupment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Reviewed and accepted</fullName>
+            <fullName>Overpayment Reversed</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -89,7 +85,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Perform Provider %26 Claims data research</fullName>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
             <default>false</default>
         </values>
         <values>
@@ -125,6 +121,10 @@
         <picklist>Case_Type__c</picklist>
         <values>
             <fullName>Credit_Balance_Recoupment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid PI Audit</fullName>
             <default>false</default>
         </values>
         <values>
@@ -185,6 +185,29 @@
         </values>
         <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
             <default>false</default>
         </values>
     </picklistValues>
