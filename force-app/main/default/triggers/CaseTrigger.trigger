@@ -1,22 +1,4 @@
 trigger CaseTrigger on Case (after insert, after update, before update, before insert) {
-    
-
-    if(trigger.isBefore && trigger.isInsert){
-        for(Case cs : trigger.new){
-            cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
-        }
-    }
-    
-    Map<Id, Decimal> caseActivityIdToAmount = new Map<Id,Decimal>();
-    set<Id> caseId = new Set<Id>();
-
-    if(trigger.isBefore && trigger.isUpdate){
-        for(Case cs : trigger.new){
-            if(cs.Total_Overpayment__c != cs.Total_PP_Amount__c){
-                cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
-            }
-        }
-    }
 
     if(trigger.isAfter && trigger.isInsert){
         CaseAssociationsController.createRecord(trigger.new);
@@ -24,6 +6,8 @@ trigger CaseTrigger on Case (after insert, after update, before update, before i
 
     if(trigger.isBefore && trigger.isInsert){
         for(Case cs : trigger.new){
+            cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
+
             if(cs.Payment_Plan__c == 'Yes'){
                 cs.No_Of_Installment_Backup__c = cs.No_Of_Installment__c;
                 cs.PP_Type_Backup__c = cs.PP_Type__c; 
@@ -60,6 +44,9 @@ trigger CaseTrigger on Case (after insert, after update, before update, before i
                     && cs.PP_Begin_Date_Backup__c == null)){
                     cs.PP_Begin_Date_Backup__c = cs.PP_Begin_Date__c;
                 }
+            }
+            if(cs.Total_Overpayment__c != cs.Total_PP_Amount__c){
+                cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
             }
         }
     }
