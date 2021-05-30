@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseSupervisorCanOnlyAssignCasetoOthers</fullName>
+    <active>true</active>
+    <description>only case supervisors can assign case to others</description>
+    <errorConditionFormula>AND(ISCHANGED(OwnerId), ($User.Id != Case_Supervisor__r.Id), ($User.Id != OwnerId))</errorConditionFormula>
+    <errorMessage>Only case supervisor can assign a case to others users</errorMessage>
+</ValidationRule>

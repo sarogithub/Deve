@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentPlanDetailsRequiredForWeekMonYear</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISBLANK(TEXT(PP_Type__c)), ISBLANK(Total_PP_Amount__c), ISBLANK(No_Of_Installment__c), ISBLANK(PP_Begin_Date__c)), ISPICKVAL(Payment_Plan__c, &apos;Yes&apos;), NOT(ISPICKVAL(PP_Type__c, &apos;Others&apos;)), NOT(ISPICKVAL(PP_Type__c, &apos;One Time&apos;)))</errorConditionFormula>
+    <errorMessage>If Payment Plan is Yes, PP Type, Total PP Amount, No Of Installment, PP Begin Date fields are required in Payment Plan Header section.</errorMessage>
+</ValidationRule>

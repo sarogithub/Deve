@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period_Claim_Client_Radio_Button_Type</fullName>
+    <active>true</active>
+    <description>This rule applies to only Perform Provider &amp; Claims Data Research case activity</description>
+    <errorConditionFormula>(RecordType.DeveloperName = &apos;Perform_Provider_Claims_Data_Research&apos; &amp;&amp; ((Claim__c = TRUE &amp;&amp; Period__c = TRUE &amp;&amp; Client__c = TRUE) || (Claim__c = FALSE &amp;&amp; Period__c = FALSE &amp;&amp; Client__c = FALSE) || (Claim__c = TRUE &amp;&amp; Period__c = TRUE) || (Claim__c = TRUE &amp;&amp; Client__c = TRUE) || (Period__c = TRUE &amp;&amp; Client__c = TRUE)) &amp;&amp;  Auto_Closure__c = FALSE &amp;&amp; NOT(ISNEW()) &amp;&amp;  PRIORVALUE(Case_Supervisor_User__c) = Case_Supervisor_User__c)</errorConditionFormula>
+    <errorMessage>Please select anyone from the Claim, Client and Period checkbox.</errorMessage>
+</ValidationRule>

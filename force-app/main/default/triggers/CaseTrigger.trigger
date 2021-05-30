@@ -1,5 +1,23 @@
-trigger CaseTrigger on Case (after insert, after update) {
+trigger CaseTrigger on Case (after insert, after update, before update, before insert) {
     
+
+    if(trigger.isBefore && trigger.isInsert){
+        for(Case cs : trigger.new){
+            cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
+        }
+    }
+    
+    Map<Id, Decimal> caseActivityIdToAmount = new Map<Id,Decimal>();
+    set<Id> caseId = new Set<Id>();
+
+    if(trigger.isBefore && trigger.isUpdate){
+        for(Case cs : trigger.new){
+            if(cs.Total_Overpayment__c != cs.Total_PP_Amount__c){
+                cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
+            }
+        }
+    }
+
     if(trigger.isAfter && trigger.isInsert){
         CaseAssociationsController.createRecord(trigger.new);
     }

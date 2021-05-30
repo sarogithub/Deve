@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CaseOwnerCannotAssignCaseToSomeone</fullName>
+    <active>true</active>
+    <description>Case owners cannot assign case to someone</description>
+    <errorConditionFormula>AND(ISCHANGED(OwnerId), (PRIORVALUE(OwnerId) ==  $User.Id),(Case_Supervisor__r.Id !=  $User.Id))</errorConditionFormula>
+    <errorMessage>You dont have access to assign case to other users</errorMessage>
+</ValidationRule>
