@@ -70,7 +70,26 @@ trigger CaseTrigger on Case (after insert, after update, before update, before i
         Map<Id,Set<String>> caseIdWithActivitiesToEnable=new Map<Id,Set<string>>();
         Case_Activity__c act;
         Map<Id,Map<String,Integer>> caseWithAdditionalMap=new Map<Id,Map<String,Integer>>();  
-            
+        List<Id> caseIds = new List<Id>();
+
+        /*for(Case cas : trigger.new){
+            if(trigger.oldMap.get(cas.id).Case_Supervisor__c != cas.Case_Supervisor__c){
+                caseIds.add(cas.Id);
+            }
+        }
+
+        if(caseIds.size() > 0){
+            List<Case_Activity__c> ActivitiesToUpdateForCaseSupervisor = new List<Case_Activity__c>();
+            for(Case_Activity__c casAct : [SELECT Id, Case_Supervisor_User__c, Case__r.Case_Supervisor__c FROM Case_Activity__c WHERE Case__c IN: caseIds]){
+                casAct.Case_Supervisor_User__c = casAct.Case__r.Case_Supervisor__c;
+                ActivitiesToUpdateForCaseSupervisor.add(casAct);
+            }
+
+            if(ActivitiesToUpdateForCaseSupervisor.size() > 0){
+                update ActivitiesToUpdateForCaseSupervisor;
+             }
+        }*/
+        
         for(case c:trigger.new){
             if(c.Activities_to_close__c != null && trigger.oldMap.get(c.Id).Activities_to_close__c != c.Activities_to_close__c){
                 List<String> activitiesName=c.Activities_to_close__c.split(';');

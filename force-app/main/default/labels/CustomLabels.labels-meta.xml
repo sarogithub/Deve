@@ -21,4 +21,11 @@
         <shortDescription>NoOverpayent</shortDescription>
         <value>There is no overpayment</value>
     </labels>
+    <labels>
+        <fullName>SupervisorApprovedEditAccessMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupervisorApprovedEditAccessMessage</shortDescription>
+        <value>Your are allowed to edit only Activity Status and Activity Business Status field values once the supervisor approved the activity</value>
+    </labels>
 </CustomLabels>
