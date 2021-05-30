@@ -38,7 +38,7 @@ trigger CaseTrigger on Case (after insert, after update) {
         system.debug('****'+caseWithAdditionalMap);
         if((caseIdWithActivitiesToClose.keyset() != null && caseIdWithActivitiesToClose.keyset().size() >0) || (caseIdWithActivitiesToEnable.keyset() != null && caseIdWithActivitiesToEnable.keyset().size() >0)){
             for(Case_Activity__c ca:[select id,case__c,Case_Activity_Type__c,Activity_Business_Status__c,RecordType.Name,Activity_Due_Date__c from Case_Activity__c where (Case__c IN:caseIdWithActivitiesToClose.keyset() OR Case__c IN:caseIdWithActivitiesToEnable.keyset())]){
-                if(caseIdWithActivitiesToClose.get(ca.case__c) != null && caseIdWithActivitiesToClose.get(ca.case__c).contains(ca.RecordType.Name)){
+                if(caseIdWithActivitiesToClose.get(ca.case__c) != null && caseIdWithActivitiesToClose.get(ca.case__c).contains(ca.Case_Activity_Type__c)){
                     act=new Case_Activity__c();
                     if(ca.Activity_Business_Status__c == null || ca.Activity_Business_Status__c == '' || ca.Activity_Business_Status__c == 'None'){
                         act.Activity_Business_Status__c='Activity Not Applicable';
@@ -51,7 +51,7 @@ trigger CaseTrigger on Case (after insert, after update) {
                     }
                     ActivitiesToUpdate.add(act);
                 }
-                if(caseIdWithActivitiesToEnable.get(ca.case__c) != null && caseIdWithActivitiesToEnable.get(ca.case__c).contains(ca.RecordType.Name)){
+                if(caseIdWithActivitiesToEnable.get(ca.case__c) != null && caseIdWithActivitiesToEnable.get(ca.case__c).contains(ca.Case_Activity_Type__c)){
                     act=new Case_Activity__c();
                     act.id=ca.id;
                     act.IsEnabled__c=true;
