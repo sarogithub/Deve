@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValidateTheColloCodeTotalAmtAndOverpayme</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Total_Collo_Code_Amount__c &lt;&gt; Total_PP_Amount__c, ISPICKVAL(Status, &apos;Completed&apos;))</errorConditionFormula>
+    <errorMessage>Total Collo Code Amount is not matching the Total Overpayment Amount</errorMessage>
+</ValidationRule>

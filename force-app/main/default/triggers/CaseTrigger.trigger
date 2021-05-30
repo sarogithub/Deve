@@ -1,7 +1,67 @@
-trigger CaseTrigger on Case (after insert, after update) {
+trigger CaseTrigger on Case (after insert, after update, before update, before insert) {
     
+
+    if(trigger.isBefore && trigger.isInsert){
+        for(Case cs : trigger.new){
+            cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
+        }
+    }
+    
+    Map<Id, Decimal> caseActivityIdToAmount = new Map<Id,Decimal>();
+    set<Id> caseId = new Set<Id>();
+
+    if(trigger.isBefore && trigger.isUpdate){
+        for(Case cs : trigger.new){
+            if(cs.Total_Overpayment__c != cs.Total_PP_Amount__c){
+                cs.Total_Overpayment__c = cs.Total_PP_Amount__c;
+            }
+        }
+    }
+
     if(trigger.isAfter && trigger.isInsert){
         CaseAssociationsController.createRecord(trigger.new);
+    }
+
+    if(trigger.isBefore && trigger.isInsert){
+        for(Case cs : trigger.new){
+            if(cs.Payment_Plan__c == 'Yes'){
+                cs.No_Of_Installment_Backup__c = cs.No_Of_Installment__c;
+                cs.PP_Type_Backup__c = cs.PP_Type__c; 
+                cs.Total_PP_Amount_Backup__c = cs.Total_PP_Amount__c;
+                cs.PP_Begin_Date_Backup__c = cs.PP_Begin_Date__c;
+            }
+        }
+    }
+
+    if(trigger.isBefore && trigger.isUpdate){
+        for(Case cs : trigger.new){
+            if(cs.Payment_Plan__c == 'Yes'){
+                if((Trigger.OldMap.get(cs.Id).No_Of_Installment__c != cs.No_Of_Installment__c
+                    && Trigger.OldMap.get(cs.Id).No_Of_Installment__c == null)
+                    || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c 
+                    && cs.No_Of_Installment_Backup__c == null)){
+                    cs.No_Of_Installment_Backup__c = cs.No_Of_Installment__c;
+                }
+                if((Trigger.OldMap.get(cs.Id).PP_Type__c != cs.PP_Type__c
+                    && Trigger.OldMap.get(cs.Id).PP_Type__c == null)
+                    || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c
+                    && cs.PP_Type_Backup__c == null)){
+                    cs.PP_Type_Backup__c = cs.PP_Type__c; 
+                }
+                if((Trigger.OldMap.get(cs.Id).Total_PP_Amount__c != cs.Total_PP_Amount__c
+                    && Trigger.OldMap.get(cs.Id).Total_PP_Amount__c == null)
+                    || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c 
+                    && cs.Total_PP_Amount_Backup__c == null)){
+                    cs.Total_PP_Amount_Backup__c = cs.Total_PP_Amount__c;
+                }
+                if((Trigger.OldMap.get(cs.Id).PP_Begin_Date__c != cs.PP_Begin_Date__c
+                    && Trigger.OldMap.get(cs.Id).PP_Begin_Date__c == null)
+                    || (Trigger.OldMap.get(cs.Id).Payment_Plan__c != cs.Payment_Plan__c 
+                    && cs.PP_Begin_Date_Backup__c == null)){
+                    cs.PP_Begin_Date_Backup__c = cs.PP_Begin_Date__c;
+                }
+            }
+        }
     }
     
     if(trigger.isAfter && trigger.isUpdate){

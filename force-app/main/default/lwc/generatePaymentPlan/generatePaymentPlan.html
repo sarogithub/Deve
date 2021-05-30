@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Generate/Update Payment Plan" icon-name="custom:custom41">
+        <c-spinner 
+            if:true={isLoading}
+            spinner-loading-message={spinnerLoadingMessage}>
+        </c-spinner>
+
+        <c-imp-wiz-info-message
+            title="Refresh" 
+            class-name="infoBox" 
+            icon-name="utility:info" 
+            message="Please refersh before any action">
+        </c-imp-wiz-info-message>
+
+        <c-imp-wiz-info-message
+            title={infoMessageTitle} 
+            class-name={className} 
+            icon-name={iconName} 
+            message={infoMessageDescription}
+            if:true={showInfoMessage}>
+        </c-imp-wiz-info-message>
+        
+        <div class="slds-align_absolute-center">
+            <lightning-button title="Generate Payment Plan" onclick={openModalForGeneratePPDConfirm} label="Generate Payment Plan"
+                icon-name="utility:money" disabled={disableGenerateBtn}>
+            </lightning-button>
+
+            <lightning-button title="Update Payment Plan Details" onclick={updatePaymentPlanValidation} label="Update Payment Plan Details"
+                icon-name="utility:money" disabled={disableUpdatePPDBtn}>
+            </lightning-button>
+        </div>
+
+        <div slot="actions">
+                <lightning-button title="Refresh" onclick={refresh} label="Refresh"
+                icon-name="utility:refresh">
+            </lightning-button>        
+        </div>
+
+        <c-confirmation-modal
+            title={title}
+            pop-up-message={popUpMessage}
+            if:true={showModal}
+            onconfirm={handleOnConfirmFromModal}
+            functionality={functionality}>
+        </c-confirmation-modal>
+    </lightning-card>
+</template>
