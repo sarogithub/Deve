@@ -51,9 +51,9 @@
                 <label>Perform Initial Risk Assessment</label>
             </value>
             <value>
-                <fullName>Perform Provider &amp; Claims data research</fullName>
+                <fullName>Perform Provider &amp; Claims Data Research</fullName>
                 <default>false</default>
-                <label>Perform Provider &amp; Claims data research</label>
+                <label>Perform Provider &amp; Claims Data Research</label>
             </value>
             <value>
                 <fullName>Perform Review</fullName>
@@ -109,6 +109,51 @@
                 <fullName>Test Activity 1</fullName>
                 <default>false</default>
                 <label>Test Activity 1</label>
+            </value>
+            <value>
+                <fullName>Identify Samples &amp; Methodology for Audit</fullName>
+                <default>false</default>
+                <label>Identify Samples &amp; Methodology for Audit</label>
+            </value>
+            <value>
+                <fullName>Perform Provider Self Review</fullName>
+                <default>false</default>
+                <label>Perform Provider Self Review</label>
+            </value>
+            <value>
+                <fullName>Evaluate Provider Findings</fullName>
+                <default>false</default>
+                <label>Evaluate Provider Findings</label>
+            </value>
+            <value>
+                <fullName>Perform DHSS PI Review/Audit</fullName>
+                <default>false</default>
+                <label>Perform DHSS PI Review/Audit</label>
+            </value>
+            <value>
+                <fullName>Evaluate Audit Findings</fullName>
+                <default>false</default>
+                <label>Evaluate Audit Findings</label>
+            </value>
+            <value>
+                <fullName>Determine Provider Actions</fullName>
+                <default>false</default>
+                <label>Determine Provider Actions</label>
+            </value>
+            <value>
+                <fullName>Reconsideration</fullName>
+                <default>false</default>
+                <label>Reconsideration</label>
+            </value>
+            <value>
+                <fullName>Provider Appeal</fullName>
+                <default>false</default>
+                <label>Provider Appeal</label>
+            </value>
+            <value>
+                <fullName>Recoupment/Financial Tracking</fullName>
+                <default>false</default>
+                <label>Recoupment/Financial Tracking</label>
             </value>
         </valueSetDefinition>
     </valueSet>

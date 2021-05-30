@@ -195,4 +195,27 @@
             <default>false</default>
         </values>
     </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

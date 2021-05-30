@@ -25,6 +25,11 @@
                 <default>false</default>
                 <label>Provider Audit-Desktop</label>
             </value>
+            <value>
+                <fullName>Medicaid PI Audit</fullName>
+                <default>false</default>
+                <label>Medicaid PI Audit</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

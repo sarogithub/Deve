@@ -7,6 +7,10 @@
     <picklistValues>
         <picklist>Activity_Business_Status__c</picklist>
         <values>
+            <fullName>Activity Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Document Request Completed</fullName>
             <default>false</default>
         </values>
@@ -73,7 +77,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Perform Provider %26 Claims data research</fullName>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
             <default>false</default>
         </values>
         <values>
@@ -173,6 +177,29 @@
         </values>
         <values>
             <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supervisor_Approval_Status__c</picklist>
+        <values>
+            <fullName>Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
             <default>false</default>
         </values>
     </picklistValues>
