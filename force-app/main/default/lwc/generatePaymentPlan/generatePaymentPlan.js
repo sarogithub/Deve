@@ -62,7 +62,7 @@ export default class GeneratePaymentPlan extends LightningElement {
                     this.infoMessageDescription = 'One or More Payment is done, so you are not allowed to update the Payment Plan Details. Kindly go to the Individual Payment Plan Detail record and update it.'
                     this.className = 'infoBox';
                     this.iconName = 'utility:info';
-                    this.showInfoMessage = true;
+                    //this.showInfoMessage = true; - commented to not to show the info message on screen
                 }else if(this.btnEnablement === 'disableGenerateBtn'){
                     this.disableGenerateBtn = true;
                 }else if(this.btnEnablement === 'disableUpdatePPDBtn'){
