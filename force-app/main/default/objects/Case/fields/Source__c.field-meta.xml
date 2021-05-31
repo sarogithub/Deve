@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AS 47.05.200 (Contracted Audit)</fullName>
+                <default>false</default>
+                <label>AS 47.05.200 (Contracted Audit)</label>
+            </value>
+            <value>
+                <fullName>Analytic/Outlier</fullName>
+                <default>false</default>
+                <label>Analytic/Outlier</label>
+            </value>
+            <value>
+                <fullName>Other Complaint/Referral</fullName>
+                <default>false</default>
+                <label>Other Complaint/Referral</label>
+            </value>
+            <value>
+                <fullName>Division of Healthcare Services Referral</fullName>
+                <default>false</default>
+                <label>Division of Healthcare Services Referral</label>
+            </value>
+            <value>
+                <fullName>enior and Disabilities Services Division Referral</fullName>
+                <default>false</default>
+                <label>enior and Disabilities Services Division Referral</label>
+            </value>
+            <value>
+                <fullName>Behavioral Health Services Division</fullName>
+                <default>false</default>
+                <label>Behavioral Health Services Division</label>
+            </value>
+            <value>
+                <fullName>Medicaid Fraud Control Unit</fullName>
+                <default>false</default>
+                <label>Medicaid Fraud Control Unit</label>
+            </value>
+            <value>
+                <fullName>Medicaid Fraud Control Unit - Global Settlement</fullName>
+                <default>false</default>
+                <label>Medicaid Fraud Control Unit - Global Settlement</label>
+            </value>
+            <value>
+                <fullName>Payment Error Rate Measurement (PERM)</fullName>
+                <default>false</default>
+                <label>Payment Error Rate Measurement (PERM)</label>
+            </value>
+            <value>
+                <fullName>Universal Program Integrity Contractor (UPIC)</fullName>
+                <default>false</default>
+                <label>Universal Program Integrity Contractor (UPIC)</label>
+            </value>
+            <value>
+                <fullName>Self-Audit - Legislative -7 AAC 160.115(b)</fullName>
+                <default>false</default>
+                <label>Self-Audit - Legislative -7 AAC 160.115(b)</label>
+            </value>
+            <value>
+                <fullName>Self-Audit - Program Integrity Initiated</fullName>
+                <default>false</default>
+                <label>Self-Audit - Program Integrity Initiated</label>
+            </value>
+            <value>
+                <fullName>Self-Disclosure - Provider Initiated</fullName>
+                <default>false</default>
+                <label>Self-Disclosure - Provider Initiated</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -113,9 +113,9 @@ public with sharing class PaymentPlanController {
 
         if(caseRec.PP_Type__c == 'Monthly' && installmentNo > 1){
             return (caseRec.PP_Begin_Date__c).addMonths((installmentNoForCalc));
-        }else if(caseRec.PP_Type__c == 'Weekly' && installmentNo > 1){
-            return (caseRec.PP_Begin_Date__c).addDays((installmentNoForCalc*7));
-        }else if(caseRec.PP_Type__c == 'Yearly' && installmentNo > 1){
+        }else if(caseRec.PP_Type__c == 'Quarterly' && installmentNo > 1){
+            return (caseRec.PP_Begin_Date__c).addMonths((installmentNoForCalc*3));
+        }else if(caseRec.PP_Type__c == 'Annual' && installmentNo > 1){
             return (caseRec.PP_Begin_Date__c).addYears((installmentNoForCalc));
         }
 
