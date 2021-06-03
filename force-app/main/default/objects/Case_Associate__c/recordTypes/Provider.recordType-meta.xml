@@ -21,10 +21,6 @@
     <picklistValues>
         <picklist>Associate_Type__c</picklist>
         <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Primary</fullName>
             <default>false</default>
         </values>
@@ -36,15 +32,15 @@
     <picklistValues>
         <picklist>Entity_Type__c</picklist>
         <values>
-            <fullName>Claims</fullName>
+            <fullName>Billing Provider</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Member</fullName>
+            <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Provider</fullName>
+            <fullName>Rendering Provider</fullName>
             <default>false</default>
         </values>
     </picklistValues>

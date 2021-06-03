@@ -62,7 +62,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Referrral_Source__c</field>
+                <field>Case_Referral__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -91,6 +91,62 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Interest_1__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Case_Subtype__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Payment_Plan__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_Type__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_PP_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>No_Of_Installment__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_Begin_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_End_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Total_Repaid_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Offset_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Overpayment__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_Begin_Date_Backup__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Balance_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_Received__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Check_or_MO_Number__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -305,6 +361,39 @@
         <relatedList>Case_Associate__c.Case_Number__c</relatedList>
         <sortField>NAME</sortField>
         <sortOrder>Asc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Installment__c</fields>
+        <fields>Amount_to_Repaid__c</fields>
+        <fields>Payment_Due_Date__c</fields>
+        <fields>Status__c</fields>
+        <fields>Received_Amount__c</fields>
+        <fields>Offset_Amount__c</fields>
+        <relatedList>Payment_Plan_Detail__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Amount__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>CREATED_DATE</fields>
+        <relatedList>Collo_Codes__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>ID__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Payer__c</fields>
+        <fields>Date_of_Check__c</fields>
+        <relatedList>Check_Log_Elements__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Allegation_Type__c</fields>
+        <fields>Referral_Date__c</fields>
+        <fields>Total_Paid_Claims__c</fields>
+        <fields>Amount_at_Risk__c</fields>
+        <relatedList>Case_Referral_Attribute__c.Case__c</relatedList>
     </relatedLists>
     <relatedObjects>ContactId</relatedObjects>
     <relatedObjects>AccountId</relatedObjects>

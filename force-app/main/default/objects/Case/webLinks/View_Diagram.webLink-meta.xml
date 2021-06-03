@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>View_Diagram</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>View Flow Diagram</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/35.0/connection.js&apos;)}
+var v = &apos;{!Case.Type}&apos;;
+
+if(v == &apos;Credit – Balance Recoupment&apos;){
+window.open(&apos;https://c.na73.visual.force.com/resource/1508153440000/CreditBalanceNew&apos;,&apos;_blank&apos;);
+}else if(v == &apos;Provider Audit-Onsite&apos; || v == &apos;Provider Audit-Desktop&apos;){
+window.open(&apos;https://c.na73.visual.force.com/resource/1507291290000/ProviderAuditOnline&apos;,&apos;_blank&apos;);
+}else{
+alert(&apos;Currently, no process flow has been updated in system.&apos;);
+}</url>
+</WebLink>

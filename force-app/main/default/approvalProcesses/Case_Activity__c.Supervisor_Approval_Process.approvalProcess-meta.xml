@@ -28,14 +28,9 @@
     <enableMobileDeviceAccess>true</enableMobileDeviceAccess>
     <entryCriteria>
         <criteriaItems>
-            <field>Case_Activity__c.Status__c</field>
-            <operation>notEqual</operation>
-            <value>Not Started,Completed</value>
-        </criteriaItems>
-        <criteriaItems>
             <field>Case_Activity__c.Supervisor_Approval_Status__c</field>
-            <operation>notEqual</operation>
-            <value>Pending,Approved,Rejected</value>
+            <operation>equals</operation>
+            <value>Applicable,Rejected</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalActions>

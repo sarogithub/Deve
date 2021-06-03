@@ -18,6 +18,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Notification Not Acknowledged</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Overpayment Accepted</fullName>
             <default>false</default>
         </values>

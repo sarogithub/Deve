@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllAccounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Location__c</columns>
+    <columns>Gender__c</columns>
+    <columns>Medical_Record_No__c</columns>
+    <columns>National_Identifier__c</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>Entity_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Member</value>
+    </filters>
+    <label>All Entities</label>
+</ListView>

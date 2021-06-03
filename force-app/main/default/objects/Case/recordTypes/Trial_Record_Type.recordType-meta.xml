@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trial_Record_Type</fullName>
+    <active>true</active>
+    <businessProcess>Default</businessProcess>
+    <description>This is a trial record type created to understand the record-type creation process and document the same.</description>
+    <label>Trial Record Type</label>
+    <picklistValues>
+        <picklist>Activities_to_close__c</picklist>
+        <values>
+            <fullName>Compile Audit Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispose Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify Samples for Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Detailed Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Initial Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform site Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare Addendum-A for Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider on-Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive %26 Track Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBasic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Activity 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verify Provider Billing Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Activities_to_enable__c</picklist>
+        <values>
+            <fullName>Compile Audit Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirm Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispose Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify Samples for Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Detailed Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Initial Risk Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform site Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare Addendum-A for Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider on-Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive %26 Track Credit Balance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receive Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Document</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBasic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test Activity 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verify Provider Billing Issues</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Amount_Type_1__c</picklist>
+        <values>
+            <fullName>Appeal Outcome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overpayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Adjustment%2FOffset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Check - Claim Specific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Check - Lump Sum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Outcome Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recovery Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement Outcome</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Amount_Type__c</picklist>
+        <values>
+            <fullName>Appeal Outcome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overpayment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Adjustment%2FOffset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Check - Claim Specific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment by Check - Lump Sum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration Outcome Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recovery Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement Outcome</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Business_Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial Activity 1 Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial Activity 1 Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial Activity 2 Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial Activity 2 Open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Disposition_Status__c</picklist>
+        <values>
+            <fullName>Administrative Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_On_Hold_Due_to_Case_Activity_Name__c</picklist>
+        <values>
+            <fullName>Determine Provider Actions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispose Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluate Audit Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluate Provider Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify Samples %26 Methodology for Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform DHSS PI Review%2FAudit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Provider %26 Claims Data Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perform Provider Self Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recoupment%2FFinancial Tracking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Referral__c</picklist>
+        <values>
+            <fullName>Federal Audit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Tip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid Fraud Control Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Subtype__c</picklist>
+        <values>
+            <fullName>Subtype 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subtype 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subtype 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subtype 4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Media Monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PP_Type__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Plan__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>P1</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>P2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Audit Findings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaints</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denial Resolution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farm at Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Emergency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbreak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outliers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Pay Profiling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review_Findings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sample_Method__c</picklist>
+        <values>
+            <fullName>simple</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stratified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>systematic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>AS 47%2E05%2E200 %28Contracted Audit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analytic%2FOutlier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Behavioral Health Services Division</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Division of Healthcare Services Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid Fraud Control Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicaid Fraud Control Unit - Global Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Complaint%2FReferral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Error Rate Measurement %28PERM%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Audit - Legislative -7 AAC 160%2E115%28b%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Audit - Program Integrity Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Disclosure - Provider Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Program Integrity Contractor %28UPIC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>enior and Disabilities Services Division Referral</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Trial Record Type</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

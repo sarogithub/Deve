@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Member</fullName>
-    <active>true</active>
+    <active>false</active>
     <label>Member</label>
     <picklistValues>
         <picklist>Associate_Entity_Type__c</picklist>
@@ -21,10 +21,6 @@
     <picklistValues>
         <picklist>Associate_Type__c</picklist>
         <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Primary</fullName>
             <default>false</default>
         </values>
@@ -36,15 +32,15 @@
     <picklistValues>
         <picklist>Entity_Type__c</picklist>
         <values>
-            <fullName>Claims</fullName>
+            <fullName>Billing Provider</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Member</fullName>
+            <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Provider</fullName>
+            <fullName>Rendering Provider</fullName>
             <default>false</default>
         </values>
     </picklistValues>

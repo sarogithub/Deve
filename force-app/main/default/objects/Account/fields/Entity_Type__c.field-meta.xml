@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entity_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Entity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Provider</fullName>
+                <default>false</default>
+                <label>Billing Provider</label>
+            </value>
+            <value>
+                <fullName>Rendering Provider</fullName>
+                <default>false</default>
+                <label>Rendering Provider</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Claims</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Claims</label>
+            </value>
+            <value>
+                <fullName>Member</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Member</label>
+            </value>
+            <value>
+                <fullName>Provider</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Provider</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

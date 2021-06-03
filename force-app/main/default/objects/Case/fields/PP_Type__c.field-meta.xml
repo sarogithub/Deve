@@ -17,9 +17,14 @@
                 <label>One Time</label>
             </value>
             <value>
-                <fullName>Weekly</fullName>
+                <fullName>Annual</fullName>
                 <default>false</default>
-                <label>Weekly</label>
+                <label>Annual</label>
+            </value>
+            <value>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+                <label>Quarterly</label>
             </value>
             <value>
                 <fullName>Monthly</fullName>
@@ -27,14 +32,15 @@
                 <label>Monthly</label>
             </value>
             <value>
-                <fullName>Yearly</fullName>
-                <default>false</default>
-                <label>Yearly</label>
-            </value>
-            <value>
                 <fullName>Others</fullName>
                 <default>false</default>
                 <label>Others</label>
+            </value>
+            <value>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Weekly</label>
             </value>
         </valueSetDefinition>
     </valueSet>

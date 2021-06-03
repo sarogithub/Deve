@@ -73,7 +73,7 @@ trigger PrimaryAssociateType on Case_Associate__c (Before Insert, After Insert) 
             }
             //Update Email Id to All Activities From Case.
             Case cs = [Select id,Case_Name__c,ContactEmail from Case Where ID In:caseId1];
-            List<Case_Activity__c> casActList = [Select id,name,Case__c,Provider_Email__c from Case_Activity__c Where Case__c IN: caseId1];
+            /*List<Case_Activity__c> casActList = [Select id,name,Case__c,Provider_Email__c from Case_Activity__c Where Case__c IN: caseId1];
             for(Case_Activity__c caAct : casActList){
                 caAct.Provider_Email__c = cs.ContactEmail;
                 caActLsit1.add(caAct);
@@ -81,7 +81,7 @@ trigger PrimaryAssociateType on Case_Associate__c (Before Insert, After Insert) 
             
             If(caActLsit1.size() > 0){
                 Update caActLsit1;
-            }
+            }*/
         }
     }
 }

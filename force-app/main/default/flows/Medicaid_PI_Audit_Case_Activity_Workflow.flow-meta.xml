@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -2237,7 +2238,7 @@
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_52</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 5) AND 2 AND 3 AND 4</conditionLogic>
             <conditions>
                 <processMetadataValues>
                     <name>inputDataType</name>
@@ -2360,6 +2361,37 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Medicaid PI Audit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Activity_Business_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Notification Not Acknowledged</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -3415,6 +3447,9 @@
         <label>myDecision71</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision74</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_72</name>
@@ -3547,6 +3582,151 @@
                 <targetReference>myRule_72_A1</targetReference>
             </connector>
             <label>WF25</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>25.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision74</name>
+        <label>myDecision74</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_75</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Case__r.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Medicaid PI Audit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Case_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reconsideration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Activity_Business_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Provider Appeal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_75_A1</targetReference>
+            </connector>
+            <label>WF22.1</label>
         </rules>
     </decisions>
     <decisions>
@@ -3704,7 +3884,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_10_A1_5630293953</name>
+        <name>formula_11_myRule_10_A1_4151704538</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -3715,7 +3895,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_14_myRule_13_A1_3395572595</name>
+        <name>formula_14_myRule_13_A1_6879710736</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3726,7 +3906,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_16_A1_8227459048</name>
+        <name>formula_17_myRule_16_A1_1144044470</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3737,7 +3917,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_19_A1_4695196568</name>
+        <name>formula_20_myRule_19_A1_9128737432</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3748,7 +3928,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_23_myRule_22_A1_1565541017</name>
+        <name>formula_23_myRule_22_A1_5383760527</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3759,7 +3939,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_26_myRule_25_A1_7724193620</name>
+        <name>formula_26_myRule_25_A1_6691361438</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3770,7 +3950,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_29_myRule_28_A1_6641337112</name>
+        <name>formula_29_myRule_28_A1_4711653658</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3781,7 +3961,7 @@
                 <stringValue>Today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5954177751</name>
+        <name>formula_2_myRule_1_A1_1133482539</name>
         <dataType>Date</dataType>
         <expression>Today()</expression>
     </formulas>
@@ -3792,7 +3972,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_31_A1_5857856646</name>
+        <name>formula_32_myRule_31_A1_8516321103</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3803,7 +3983,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_35_myRule_34_A1_0337617288</name>
+        <name>formula_35_myRule_34_A1_1831626224</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3814,7 +3994,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_38_myRule_37_A2_8164862605</name>
+        <name>formula_38_myRule_37_A2_8538157624</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3825,7 +4005,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_41_myRule_40_A1_9616456025</name>
+        <name>formula_41_myRule_40_A1_4433213944</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3836,7 +4016,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_43_A1_1681128656</name>
+        <name>formula_44_myRule_43_A1_5681051745</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3847,7 +4027,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_47_myRule_46_A1_9502574254</name>
+        <name>formula_47_myRule_46_A1_7879698154</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3858,7 +4038,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_50_myRule_49_A1_5287093791</name>
+        <name>formula_50_myRule_49_A1_2802103129</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3869,7 +4049,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_53_myRule_52_A1_1019812824</name>
+        <name>formula_53_myRule_52_A1_0016193515</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3880,7 +4060,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_56_myRule_55_A1_0040424030</name>
+        <name>formula_56_myRule_55_A1_8981566954</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3891,7 +4071,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_59_myRule_58_A1_3702385352</name>
+        <name>formula_59_myRule_58_A1_9703963103</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3902,7 +4082,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_8773569279</name>
+        <name>formula_5_myRule_4_A1_2394829134</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -3913,7 +4093,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_62_myRule_61_A1_0011351680</name>
+        <name>formula_62_myRule_61_A1_0485772916</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3924,7 +4104,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_65_myRule_64_A1_3784108962</name>
+        <name>formula_65_myRule_64_A1_9231330827</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3935,7 +4115,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_68_myRule_67_A1_8358683397</name>
+        <name>formula_68_myRule_67_A1_0043353660</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3946,7 +4126,18 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_73_myRule_72_A1_7790727088</name>
+        <name>formula_73_myRule_72_A1_6379261168</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_76_myRule_75_A1_8009049614</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3957,11 +4148,11 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_A1_8914097272</name>
+        <name>formula_8_myRule_7_A1_2536807994</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
-    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Workflow-1_InterviewLabel</interviewLabel>
+    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Workflow-2_InterviewLabel</interviewLabel>
     <label>Medicaid PI Audit - Case Activity Workflow</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -4020,6 +4211,7 @@
         <connector>
             <targetReference>myRule_10_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4060,7 +4252,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_11_myRule_10_A1_5630293953</elementReference>
+                <elementReference>formula_11_myRule_10_A1_4151704538</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4094,6 +4286,7 @@
         <label>PAO:3 - Enable Case Activity</label>
         <locationX>1000</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4129,7 +4322,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4177,6 +4370,7 @@
         <connector>
             <targetReference>myRule_13_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4212,7 +4406,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4223,7 +4417,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_14_myRule_13_A1_3395572595</elementReference>
+                <elementReference>formula_14_myRule_13_A1_6879710736</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4257,6 +4451,7 @@
         <label>PAO:5 - Enable and 3 &amp; 4 Disable Case Activity</label>
         <locationX>1300</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4292,7 +4487,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4328,7 +4523,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4376,6 +4571,7 @@
         <connector>
             <targetReference>myRule_16_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4411,7 +4607,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4422,7 +4618,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_17_myRule_16_A1_8227459048</elementReference>
+                <elementReference>formula_17_myRule_16_A1_1144044470</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4456,6 +4652,7 @@
         <label>PAO:4-9 Disable and PAO:10 Enable Case Activity</label>
         <locationX>1600</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4491,7 +4688,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4527,7 +4724,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4575,6 +4772,7 @@
         <connector>
             <targetReference>myRule_19_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4610,7 +4808,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4621,7 +4819,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_20_myRule_19_A1_4695196568</elementReference>
+                <elementReference>formula_20_myRule_19_A1_9128737432</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4655,6 +4853,7 @@
         <label>PAO:4 Enable Case Activity</label>
         <locationX>1900</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4690,7 +4889,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4738,6 +4937,7 @@
         <connector>
             <targetReference>myRule_1_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4778,7 +4978,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5954177751</elementReference>
+                <elementReference>formula_2_myRule_1_A1_1133482539</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4815,6 +5015,7 @@
         <connector>
             <targetReference>myRule_1_A3</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4850,7 +5051,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4895,6 +5096,7 @@
         <label>PAO:11 Enable Case Activity</label>
         <locationX>100</locationX>
         <locationY>400</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -4930,7 +5132,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -4978,6 +5180,7 @@
         <connector>
             <targetReference>myRule_22_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5013,7 +5216,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5024,7 +5227,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_23_myRule_22_A1_1565541017</elementReference>
+                <elementReference>formula_23_myRule_22_A1_5383760527</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5058,6 +5261,7 @@
         <label>PAO:7 Enable and 4, 5 &amp;6 Disable Case Activity</label>
         <locationX>2200</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5093,7 +5297,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5129,7 +5333,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5177,6 +5381,7 @@
         <connector>
             <targetReference>myRule_25_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5212,7 +5417,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5223,7 +5428,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_26_myRule_25_A1_7724193620</elementReference>
+                <elementReference>formula_26_myRule_25_A1_6691361438</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5257,6 +5462,7 @@
         <label>Set Case Status to On Hold</label>
         <locationX>2500</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5292,7 +5498,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5340,6 +5546,7 @@
         <connector>
             <targetReference>myRule_28_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5375,7 +5582,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5386,7 +5593,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_29_myRule_28_A1_6641337112</elementReference>
+                <elementReference>formula_29_myRule_28_A1_4711653658</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5420,6 +5627,7 @@
         <label>PAO:5 - 10 Disable Case Activity and Enable PAO:11</label>
         <locationX>2800</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5455,7 +5663,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5491,7 +5699,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5539,6 +5747,7 @@
         <connector>
             <targetReference>myRule_31_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5574,7 +5783,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5585,7 +5794,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_32_myRule_31_A1_5857856646</elementReference>
+                <elementReference>formula_32_myRule_31_A1_8516321103</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5619,6 +5828,7 @@
         <label>PAO:5 Enable Case Activity</label>
         <locationX>3100</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5654,7 +5864,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5702,6 +5912,7 @@
         <connector>
             <targetReference>myRule_34_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5737,7 +5948,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5748,7 +5959,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_35_myRule_34_A1_0337617288</elementReference>
+                <elementReference>formula_35_myRule_34_A1_1831626224</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5782,6 +5993,7 @@
         <label>Enable 7 and Disable 5 &amp; 6 case activtity</label>
         <locationX>3400</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5817,7 +6029,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5853,7 +6065,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5901,6 +6113,7 @@
         <connector>
             <targetReference>myRule_37_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -5936,7 +6149,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -5981,6 +6194,7 @@
         <label>Update End Date - Case Activity</label>
         <locationX>3700</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6016,7 +6230,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6027,7 +6241,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_38_myRule_37_A2_8164862605</elementReference>
+                <elementReference>formula_38_myRule_37_A2_8538157624</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6064,6 +6278,7 @@
         <connector>
             <targetReference>myRule_40_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6099,7 +6314,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6110,7 +6325,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_41_myRule_40_A1_9616456025</elementReference>
+                <elementReference>formula_41_myRule_40_A1_4433213944</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6144,6 +6359,7 @@
         <label>Enable 7 and Close 6 Case activity</label>
         <locationX>4000</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6179,7 +6395,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6215,7 +6431,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6263,6 +6479,7 @@
         <connector>
             <targetReference>myRule_43_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6298,7 +6515,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6309,7 +6526,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_44_myRule_43_A1_1681128656</elementReference>
+                <elementReference>formula_44_myRule_43_A1_5681051745</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6343,6 +6560,7 @@
         <label>Put Case Status On Hold</label>
         <locationX>4300</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6378,7 +6596,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6426,6 +6644,7 @@
         <connector>
             <targetReference>myRule_46_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6461,7 +6680,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6472,7 +6691,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_47_myRule_46_A1_9502574254</elementReference>
+                <elementReference>formula_47_myRule_46_A1_7879698154</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6506,6 +6725,7 @@
         <label>Enable 11 and 7-10 disable case activity</label>
         <locationX>4600</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6541,7 +6761,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6577,7 +6797,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6625,6 +6845,7 @@
         <connector>
             <targetReference>myRule_49_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6660,7 +6881,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6671,7 +6892,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_50_myRule_49_A1_5287093791</elementReference>
+                <elementReference>formula_50_myRule_49_A1_2802103129</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6705,6 +6926,7 @@
         <label>7 Enable case activity</label>
         <locationX>4900</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6740,7 +6962,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6788,6 +7010,7 @@
         <connector>
             <targetReference>myRule_4_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6828,7 +7051,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_8773569279</elementReference>
+                <elementReference>formula_5_myRule_4_A1_2394829134</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6862,6 +7085,7 @@
         <label>PAO:2 Enable Case Activity</label>
         <locationX>400</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6897,7 +7121,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6945,6 +7169,7 @@
         <connector>
             <targetReference>myRule_52_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -6980,7 +7205,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -6991,7 +7216,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_53_myRule_52_A1_1019812824</elementReference>
+                <elementReference>formula_53_myRule_52_A1_0016193515</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7025,6 +7250,7 @@
         <label>Enable 10 and 8, 9 disable case activity</label>
         <locationX>5200</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7060,7 +7286,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7096,7 +7322,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7144,6 +7370,7 @@
         <connector>
             <targetReference>myRule_55_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7179,7 +7406,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7190,7 +7417,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_56_myRule_55_A1_0040424030</elementReference>
+                <elementReference>formula_56_myRule_55_A1_8981566954</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7224,6 +7451,7 @@
         <label>Enable 8 and Disable 9 Case Activity</label>
         <locationX>5500</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7253,49 +7481,13 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
-                    <stringValue>Activities to close</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>MultiPicklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Activities_to_close__c</field>
-            <value>
-                <stringValue>Provider Appeal</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>MultiPicklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
                     <stringValue>Activities to enable</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7343,6 +7535,7 @@
         <connector>
             <targetReference>myRule_58_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7378,7 +7571,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7389,7 +7582,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_59_myRule_58_A1_3702385352</elementReference>
+                <elementReference>formula_59_myRule_58_A1_9703963103</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7423,6 +7616,7 @@
         <label>Enable 9 and Disable 8 Case Activity</label>
         <locationX>5800</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7458,7 +7652,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7494,7 +7688,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7542,6 +7736,7 @@
         <connector>
             <targetReference>myRule_61_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7577,7 +7772,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7588,7 +7783,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_62_myRule_61_A1_0011351680</elementReference>
+                <elementReference>formula_62_myRule_61_A1_0485772916</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7622,6 +7817,7 @@
         <label>Enable 10 Case Activity</label>
         <locationX>6100</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7651,13 +7847,49 @@
             <processMetadataValues>
                 <name>leftHandSideLabel</name>
                 <value>
+                    <stringValue>Activities to close</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activities_to_close__c</field>
+            <value>
+                <stringValue>Provider Appeal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
                     <stringValue>Activities to enable</stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7705,6 +7937,7 @@
         <connector>
             <targetReference>myRule_64_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7740,7 +7973,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7751,7 +7984,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_65_myRule_64_A1_3784108962</elementReference>
+                <elementReference>formula_65_myRule_64_A1_9231330827</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7785,6 +8018,7 @@
         <label>Enable 11 and Close 10 Case Activity</label>
         <locationX>6400</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7820,7 +8054,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7831,7 +8065,7 @@
             </processMetadataValues>
             <field>Activities_to_close__c</field>
             <value>
-                <stringValue>Recoupment/Financial Tracking</stringValue>
+                <stringValue>Recoupment/Financial Tracking; Provider Appeal</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7856,7 +8090,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7904,6 +8138,7 @@
         <connector>
             <targetReference>myRule_67_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -7939,7 +8174,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -7950,7 +8185,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_68_myRule_67_A1_8358683397</elementReference>
+                <elementReference>formula_68_myRule_67_A1_0043353660</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7984,6 +8219,7 @@
         <label>Enable 10 Case Actitivty</label>
         <locationX>6700</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8019,7 +8255,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -8064,6 +8300,7 @@
         <label>Enable 11 and Disable 10 Case activity</label>
         <locationX>7000</locationX>
         <locationY>200</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8099,7 +8336,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -8135,7 +8372,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -8183,6 +8420,7 @@
         <connector>
             <targetReference>myRule_72_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8218,7 +8456,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -8229,7 +8467,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_73_myRule_72_A1_7790727088</elementReference>
+                <elementReference>formula_73_myRule_72_A1_6379261168</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -8263,6 +8501,7 @@
         <label>Enable 11 Case Activity</label>
         <locationX>7200</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8298,7 +8537,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -8339,6 +8578,171 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
+        <name>myRule_75_A1</name>
+        <label>Update Case Activity End Date</label>
+        <locationX>7500</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_75_A2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Activity End Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activity_End_Date__c</field>
+            <value>
+                <elementReference>formula_76_myRule_75_A1_8009049614</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case_Activity__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Case_Activity__c].Case</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_75_A2</name>
+        <label>Enable 10th Activity</label>
+        <locationX>7500</locationX>
+        <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Case__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Activities to enable</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activities_to_enable__c</field>
+            <value>
+                <stringValue>Provider Appeal</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Case_Activity__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
         <name>myRule_7_A1</name>
         <label>PAO:2 Update Activity End Date</label>
         <locationX>700</locationX>
@@ -8346,6 +8750,7 @@
         <connector>
             <targetReference>myRule_7_A2</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8386,7 +8791,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_8_myRule_7_A1_8914097272</elementReference>
+                <elementReference>formula_8_myRule_7_A1_2536807994</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -8420,6 +8825,7 @@
         <label>Update Case to On Hold</label>
         <locationX>700</locationX>
         <locationY>300</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -8455,7 +8861,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>

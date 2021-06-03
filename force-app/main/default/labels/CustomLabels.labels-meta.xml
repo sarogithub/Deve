@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>ActivityNonEditable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ActivityNonEditable</shortDescription>
+        <value>Record is not editable once the case activity is completed</value>
+    </labels>
+    <labels>
         <fullName>AggregatedColloCodeShoudNotExceedOverpyayment</fullName>
         <language>en_US</language>
         <protected>false</protected>

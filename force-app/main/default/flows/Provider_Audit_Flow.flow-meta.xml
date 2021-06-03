@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <assignments>
-        <name>myVariable_waitStartTimeAssignment</name>
-        <label>myVariable_waitStartTimeAssignment</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignmentItems>
-            <assignToReference>myVariable_waitStartTimeVariable</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Flow.CurrentDateTime</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>myDecision</targetReference>
-        </connector>
-    </assignments>
+    <apiVersion>49.0</apiVersion>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -138,7 +123,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_1_A4_3933801370</name>
+        <name>formula_10_myRule_1_A4_5024770146</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -149,7 +134,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_1_A4_6693364177</name>
+        <name>formula_11_myRule_1_A4_0012886758</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -160,7 +145,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myRule_1_A3_7569386632</name>
+        <name>formula_12_myRule_1_A3_1870148283</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -171,7 +156,7 @@
                 <stringValue>Today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_13_myRule_1_A3_4065693139</name>
+        <name>formula_13_myRule_1_A3_3597320199</name>
         <dataType>Date</dataType>
         <expression>Today()</expression>
     </formulas>
@@ -182,7 +167,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_14_myRule_1_A2_6257963155</name>
+        <name>formula_14_myRule_1_A2_2468122307</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -193,7 +178,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_15_myRule_1_A2_8339990857</name>
+        <name>formula_15_myRule_1_A2_3258939635</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -204,7 +189,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_16_myRule_1_A1_0901942973</name>
+        <name>formula_16_myRule_1_A1_2296044835</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -215,7 +200,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_1_A1_9251058048</name>
+        <name>formula_17_myRule_1_A1_7526273399</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -226,7 +211,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A8_3736353037</name>
+        <name>formula_2_myRule_1_A8_4638354034</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -237,7 +222,7 @@
                 <stringValue>Today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_3_myRule_1_A8_6977664843</name>
+        <name>formula_3_myRule_1_A8_5266567857</name>
         <dataType>Date</dataType>
         <expression>Today()</expression>
     </formulas>
@@ -248,7 +233,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_4_myRule_1_A7_3873006856</name>
+        <name>formula_4_myRule_1_A7_1830986914</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -259,7 +244,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_1_A7_1967718603</name>
+        <name>formula_5_myRule_1_A7_7418012272</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -270,7 +255,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_1_A6_1905590160</name>
+        <name>formula_6_myRule_1_A6_6056563117</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -281,7 +266,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_7_myRule_1_A6_4838018094</name>
+        <name>formula_7_myRule_1_A6_2880649498</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -292,7 +277,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_1_A5_5140352652</name>
+        <name>formula_8_myRule_1_A5_0061176714</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -303,11 +288,11 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_1_A5_7376711590</name>
+        <name>formula_9_myRule_1_A5_4327371622</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
-    <interviewLabel>Provider_Audit_Flow-39_InterviewLabel</interviewLabel>
+    <interviewLabel>Provider_Audit_Flow-40_InterviewLabel</interviewLabel>
     <label>Provider Audit Case Template</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -369,7 +354,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_17_myRule_1_A1_9251058048</elementReference>
+                <elementReference>formula_17_myRule_1_A1_7526273399</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -424,7 +409,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -465,7 +450,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_16_myRule_1_A1_0901942973</elementReference>
+                <elementReference>formula_16_myRule_1_A1_2296044835</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -565,7 +550,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_15_myRule_1_A2_8339990857</elementReference>
+                <elementReference>formula_15_myRule_1_A2_3258939635</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -620,7 +605,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -661,7 +646,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_14_myRule_1_A2_6257963155</elementReference>
+                <elementReference>formula_14_myRule_1_A2_2468122307</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -761,7 +746,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_13_myRule_1_A3_4065693139</elementReference>
+                <elementReference>formula_13_myRule_1_A3_3597320199</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -816,7 +801,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -857,7 +842,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_12_myRule_1_A3_7569386632</elementReference>
+                <elementReference>formula_12_myRule_1_A3_1870148283</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -957,7 +942,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_11_myRule_1_A4_6693364177</elementReference>
+                <elementReference>formula_11_myRule_1_A4_0012886758</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1012,7 +997,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1053,7 +1038,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_10_myRule_1_A4_3933801370</elementReference>
+                <elementReference>formula_10_myRule_1_A4_5024770146</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1153,7 +1138,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_9_myRule_1_A5_7376711590</elementReference>
+                <elementReference>formula_9_myRule_1_A5_4327371622</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1208,7 +1193,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1249,7 +1234,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_8_myRule_1_A5_5140352652</elementReference>
+                <elementReference>formula_8_myRule_1_A5_0061176714</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1349,7 +1334,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_7_myRule_1_A6_4838018094</elementReference>
+                <elementReference>formula_7_myRule_1_A6_2880649498</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1404,7 +1389,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1445,7 +1430,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_6_myRule_1_A6_1905590160</elementReference>
+                <elementReference>formula_6_myRule_1_A6_6056563117</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1545,7 +1530,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_5_myRule_1_A7_1967718603</elementReference>
+                <elementReference>formula_5_myRule_1_A7_7418012272</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1600,7 +1585,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1641,7 +1626,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_4_myRule_1_A7_3873006856</elementReference>
+                <elementReference>formula_4_myRule_1_A7_1830986914</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1741,7 +1726,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_3_myRule_1_A8_6977664843</elementReference>
+                <elementReference>formula_3_myRule_1_A8_5266567857</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1796,7 +1781,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue/>
+                    <stringValue></stringValue>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1837,7 +1822,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A8_3736353037</elementReference>
+                <elementReference>formula_2_myRule_1_A8_4638354034</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1910,6 +1895,9 @@
             </value>
         </processMetadataValues>
         <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
             <name>isChildRelationship</name>
             <value>
                 <booleanValue>false</booleanValue>
@@ -1921,10 +1909,14 @@
                 <stringValue>[Case]</stringValue>
             </value>
         </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
         <name>myRule_1_A9</name>
         <label>Update Case Status to Inprogress</label>
         <locationX>100</locationX>
         <locationY>1000</locationY>
+        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -1970,8 +1962,8 @@
         </inputAssignments>
         <object>Case</object>
     </recordUpdates>
-    <startElementReference>myVariable_waitStartTimeAssignment</startElementReference>
-    <status>Active</status>
+    <startElementReference>myDecision</startElementReference>
+    <status>Draft</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>
@@ -1987,15 +1979,5 @@
         <isInput>true</isInput>
         <isOutput>false</isOutput>
         <objectType>Case</objectType>
-    </variables>
-    <variables>
-        <name>myVariable_waitStartTimeVariable</name>
-        <dataType>DateTime</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <elementReference>$Flow.CurrentDateTime</elementReference>
-        </value>
     </variables>
 </Flow>

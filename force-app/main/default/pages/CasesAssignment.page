@@ -45,7 +45,7 @@
             </apex:pageBlock>
             
             <apex:pageBlock id="out1">  
-                <apex:pageBlockSection id="out1" rendered="{!IF(recType== '0121I000000DZuFQAW', True, false)}" >
+                <apex:pageBlockSection id="out1" rendered="{!IF(recType== 'Billing Provider', True, false)}" >
                     <apex:pageBlockSectionItem >
                         <apex:outputLabel >Associate Type</apex:outputLabel>
                         <apex:inputField value="{!Case_Associate__c.Associate_Type__c}"/>
@@ -57,7 +57,7 @@
                     </apex:pageblockSectionItem>
                     
                     <apex:pageblockSectionItem >
-                        <apex:outputlabel >Entity</apex:outputlabel>
+                        <apex:outputlabel >Billing Provider</apex:outputlabel>
                         <apex:inputField value="{!Case_Associate__c.Entity1__c}"/> 
                     </apex:pageblockSectionItem>
                     
@@ -74,7 +74,7 @@
                 
                 
                 
-                <apex:pageBlockSection id="out2" rendered="{!IF(recType== '0121I000000Dps1QAC', True, false)}">
+                <apex:pageBlockSection id="out2" rendered="{!IF(recType== 'Rendering Provider', True, false)}">
                     <apex:pageBlockSectionItem >
                         <apex:outputLabel >Associate Type</apex:outputLabel>
                         <apex:inputField value="{!Case_Associate__c.Associate_Type__c}"/>
@@ -86,7 +86,7 @@
                     </apex:pageblockSectionItem>
                     
                     <apex:pageblockSectionItem >
-                        <apex:outputlabel >Claim</apex:outputlabel>
+                        <apex:outputlabel >Rendering Provider</apex:outputlabel>
                         <apex:inputField value="{!Case_Associate__c.Entity1__c}"/> 
                     </apex:pageblockSectionItem>
                     
@@ -96,7 +96,7 @@
                     </apex:pageblockSectionItem>
                 </apex:pageBlockSection>  <!-- Claim Section Finished -->
                 
-                <apex:pageBlockSection id="out3" rendered="{!IF(recType== '0121I000000DZuKQAW', True, false)}">
+                <apex:pageBlockSection id="out3" rendered="{!IF(recType== 'Other', True, false)}">
                     <apex:pageBlockSectionItem >
                         <apex:outputLabel >Associate Type</apex:outputLabel>
                         <apex:inputField value="{!Case_Associate__c.Associate_Type__c}"/>
@@ -108,7 +108,7 @@
                     </apex:pageblockSectionItem>
                     
                     <apex:pageblockSectionItem >
-                        <apex:outputlabel >Entity</apex:outputlabel>
+                        <apex:outputlabel >Other</apex:outputlabel>
                         <apex:inputField value="{!Case_Associate__c.Entity1__c}"/> 
                     </apex:pageblockSectionItem>
                     

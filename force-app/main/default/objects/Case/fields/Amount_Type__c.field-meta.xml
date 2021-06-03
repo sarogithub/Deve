@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Amount Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Overpayment</fullName>
+                <default>false</default>
+                <label>Overpayment</label>
+            </value>
+            <value>
+                <fullName>Appeal Outcome</fullName>
+                <default>false</default>
+                <label>Appeal Outcome</label>
+            </value>
+            <value>
+                <fullName>Settlement Outcome</fullName>
+                <default>false</default>
+                <label>Settlement Outcome</label>
+            </value>
+            <value>
+                <fullName>Reconsideration Outcome Amount</fullName>
+                <default>false</default>
+                <label>Reconsideration Outcome Amount</label>
+            </value>
+            <value>
+                <fullName>Recovery Amount</fullName>
+                <default>false</default>
+                <label>Recovery Amount</label>
+            </value>
+            <value>
+                <fullName>Payment by Check - Claim Specific</fullName>
+                <default>false</default>
+                <label>Payment by Check - Claim Specific</label>
+            </value>
+            <value>
+                <fullName>Payment by Check - Lump Sum</fullName>
+                <default>false</default>
+                <label>Payment by Check - Lump Sum</label>
+            </value>
+            <value>
+                <fullName>Payment by Adjustment/Offset</fullName>
+                <default>false</default>
+                <label>Payment by Adjustment/Offset</label>
+            </value>
+            <value>
+                <fullName>Payment Agreement</fullName>
+                <default>false</default>
+                <label>Payment Agreement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

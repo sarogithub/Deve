@@ -19,8 +19,8 @@
                 <field>Case_Name__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CaseNumber</field>
+                <behavior>Required</behavior>
+                <field>Reason</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -28,17 +28,65 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Type</field>
+                <field>Original_Due_Date__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Description</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Case_Subtype__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Payment_Plan__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_Type__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_PP_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>No_Of_Installment__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>PP_Begin_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Total_Repaid_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Offset_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Overpayment__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Balance_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_Received__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Check_or_MO_Number__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Reason</field>
+                <behavior>Readonly</behavior>
+                <field>CaseNumber</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -46,11 +94,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Original_Due_Date__c</field>
+                <field>Type</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Revised_Due_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>RecordTypeId</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -66,30 +118,30 @@
                 <field>Status</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Case_Business_Status__c</field>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Start_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>End_Date__c</field>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>Case_Supervisor__c</field>
+                <behavior>Readonly</behavior>
+                <field>Case_Business_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>CreatedById</field>
+                <field>Case_Supervisor__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>End_Date__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -117,91 +169,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>ContactEmail</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Financial Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Amount_Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Amount__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Interest_In_Amt__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Sampling &amp; Extrapolation</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Number_of_claims__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Universe_Amount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Sample_Method__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Total_Paid_Amount__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Other__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Case Referral Details</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Referrral_Source__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Total_Paid_Claims__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Referral_Details__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Amount_at_Risk__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -266,20 +233,6 @@
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Program Info</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ProductId</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns/>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
@@ -292,49 +245,54 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
+            <actionName>Case.Generate_Correspondence</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
+            <actionName>FeedItem.TextPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.LinkPost</actionName>
+            <actionName>FeedItem.ContentPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>FeedItem.PollPost</actionName>
+            <actionName>FeedItem.LinkPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Case.SendEmail</actionName>
+            <actionName>FeedItem.PollPost</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>4</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>CloseCase</actionName>
-            <actionType>StandardButton</actionType>
+            <actionName>Case.SendEmail</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
+            <actionName>CloseCase</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Edit</actionName>
+            <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Delete</actionName>
+            <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>9</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -370,6 +328,7 @@
     </relatedContent>
     <relatedLists>
         <customButtons>New_Case_Associate</customButtons>
+        <excludeButtons>MassChangeOwner</excludeButtons>
         <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
         <fields>Entity1__c</fields>
@@ -386,9 +345,9 @@
         <fields>Activity_Due_Date__c</fields>
         <fields>Activity_Start_Date__c</fields>
         <fields>Activity_End_Date__c</fields>
-        <fields>Comments__c</fields>
         <fields>IsEnabled__c</fields>
-        <fields>Case_Activity_Type__c</fields>
+        <fields>Supervisor_Approval_Status__c</fields>
+        <fields>CREATED_DATE</fields>
         <relatedList>Case_Activity__c.Case__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -411,6 +370,9 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
+        <relatedList>RelatedEntityHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
         <fields>CASES.SUBJECT</fields>
         <fields>CASES.PRIORITY</fields>
@@ -427,6 +389,39 @@
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Installment__c</fields>
+        <fields>Amount_to_Repaid__c</fields>
+        <fields>Payment_Due_Date__c</fields>
+        <fields>Status__c</fields>
+        <fields>Received_Amount__c</fields>
+        <fields>Offset_Amount__c</fields>
+        <relatedList>Payment_Plan_Detail__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Amount__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>CREATED_DATE</fields>
+        <relatedList>Collo_Codes__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>ID__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Payer__c</fields>
+        <fields>Date_of_Check__c</fields>
+        <relatedList>Check_Log_Elements__c.Case__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>Allegation_Type__c</fields>
+        <fields>Referral_Date__c</fields>
+        <fields>Total_Paid_Claims__c</fields>
+        <fields>Amount_at_Risk__c</fields>
+        <relatedList>Case_Referral_Attribute__c.Case__c</relatedList>
     </relatedLists>
     <relatedObjects>ContactId</relatedObjects>
     <relatedObjects>AccountId</relatedObjects>

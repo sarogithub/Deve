@@ -345,6 +345,11 @@
                 <default>false</default>
                 <label>Activity Not Applicable</label>
             </value>
+            <value>
+                <fullName>Notification Not Acknowledged</fullName>
+                <default>false</default>
+                <label>Notification Not Acknowledged</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
