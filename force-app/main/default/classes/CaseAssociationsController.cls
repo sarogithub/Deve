@@ -6,9 +6,14 @@ public class CaseAssociationsController {
     
     public CaseAssociationsController(ApexPages.StandardController controller) {
         a=(Account)controller.getRecord();
-        caList=[Select Name,Entity1__c,Case_Number__r.Account.Name,Case_Number__r.AccountId,Case_Number__c,Case_Number__r.CaseNumber,Case_Number__r.Subject,Case_Number__r.Priority,Case_Number__r.Status,Case_Number__r.Owner.Name,Case_Number__r.OwnerId,Case_Number__r.CreatedDate,Case_Number__r.ClosedDate,Entity_Type__c,Associate_Type__c from Case_Associate__c where Entity1__c=:a.Id Order By CreatedDate];
+        caList=[Select Name, Entity1__c, Case_Number__r.Account.Name, Case_Number__r.AccountId, Case_Number__c,
+                Case_Number__r.CaseNumber, Case_Number__r.Subject, Case_Number__r.Priority, Case_Number__r.Status,
+                Case_Number__r.Owner.Name, Case_Number__r.OwnerId, Case_Number__r.CreatedDate, Case_Number__r.ClosedDate, 
+                Case_Number__r.Type, Entity_Type__c, Associate_Type__c 
+                FROM Case_Associate__c where Entity1__c=:a.Id Order By CreatedDate];
         NewCaseUrl = URL.getSalesforceBaseUrl().toExternalForm()+'/500/e?def_account_id='+a.Id+'&retURL=/'+a.Id;
     }
+    
     public static void createRecord(list<case> caseRec){
         list<Case_Associate__c> CAlist= new list<Case_Associate__c>();
         Case_Associate__c curCA = new Case_Associate__c();

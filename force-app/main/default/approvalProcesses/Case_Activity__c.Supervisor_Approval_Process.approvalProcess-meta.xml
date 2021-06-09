@@ -32,6 +32,11 @@
             <operation>equals</operation>
             <value>Applicable,Rejected</value>
         </criteriaItems>
+        <criteriaItems>
+            <field>Case_Activity__c.IsEnabled__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
     </entryCriteria>
     <finalApprovalActions>
         <action>

@@ -7,7 +7,7 @@
     <summaryFilterItems>
         <field>Payment_Plan_Detail__c.Status__c</field>
         <operation>equals</operation>
-        <value>Paid</value>
+        <value>Paid, Partially Paid</value>
     </summaryFilterItems>
     <summaryForeignKey>Payment_Plan_Detail__c.Case__c</summaryForeignKey>
     <summaryOperation>sum</summaryOperation>

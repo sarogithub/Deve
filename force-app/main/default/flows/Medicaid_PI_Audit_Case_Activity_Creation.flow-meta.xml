@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>49.0</apiVersion>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -122,7 +121,7 @@
                 <stringValue>(TODAY() + 3)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_1_A1_5301556905</name>
+        <name>formula_10_myRule_1_A1_5530526776</name>
         <dataType>Date</dataType>
         <expression>(TODAY() + 3)</expression>
     </formulas>
@@ -133,7 +132,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_1_A1_7768462135</name>
+        <name>formula_11_myRule_1_A1_5655969022</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -144,7 +143,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A8_1058253941</name>
+        <name>formula_2_myRule_1_A8_5414786125</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -155,7 +154,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_3_myRule_1_A7_2613054525</name>
+        <name>formula_3_myRule_1_A7_8002718263</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -166,7 +165,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_4_myRule_1_A6_0417050266</name>
+        <name>formula_4_myRule_1_A6_8488374359</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -177,7 +176,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_1_A5_1143747451</name>
+        <name>formula_5_myRule_1_A5_3924169399</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -188,7 +187,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_1_A4_6567862674</name>
+        <name>formula_6_myRule_1_A4_2878853938</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -199,7 +198,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_7_myRule_1_A3_2821080007</name>
+        <name>formula_7_myRule_1_A3_9291131998</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -210,7 +209,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_1_A2_0414630019</name>
+        <name>formula_8_myRule_1_A2_3096765836</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -221,11 +220,11 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_1_A1_3800173822</name>
+        <name>formula_9_myRule_1_A1_8244829991</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
-    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Creation-5_InterviewLabel</interviewLabel>
+    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Creation-3_InterviewLabel</interviewLabel>
     <label>Medicaid PI Audit - Case Activity Creation</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -282,7 +281,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -293,7 +292,7 @@
             </processMetadataValues>
             <field>Activity_Due_Date__c</field>
             <value>
-                <elementReference>formula_10_myRule_1_A1_5301556905</elementReference>
+                <elementReference>formula_10_myRule_1_A1_5530526776</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -323,7 +322,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_11_myRule_1_A1_7768462135</elementReference>
+                <elementReference>formula_11_myRule_1_A1_5655969022</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -414,7 +413,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -455,7 +454,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_9_myRule_1_A1_3800173822</elementReference>
+                <elementReference>formula_9_myRule_1_A1_8244829991</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -480,7 +479,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -612,7 +611,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -658,7 +657,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -730,7 +729,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -796,7 +795,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -873,7 +872,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002Aqg1QAC</stringValue>
+                <stringValue>0126t000000GrBKAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -898,7 +897,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -934,7 +933,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -980,7 +979,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1052,7 +1051,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1118,7 +1117,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1195,7 +1194,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002Aqg6QAC</stringValue>
+                <stringValue>0126t000000GrBMAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1220,7 +1219,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1256,7 +1255,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1299,7 +1298,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1371,7 +1370,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1437,7 +1436,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1539,7 +1538,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1575,7 +1574,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1687,7 +1686,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1728,7 +1727,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_8_myRule_1_A2_0414630019</elementReference>
+                <elementReference>formula_8_myRule_1_A2_3096765836</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1753,7 +1752,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1830,7 +1829,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfSQAS</stringValue>
+                <stringValue>0126t000000GrBHAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1885,7 +1884,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -1997,7 +1996,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2038,7 +2037,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_7_myRule_1_A3_2821080007</elementReference>
+                <elementReference>formula_7_myRule_1_A3_9291131998</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2063,7 +2062,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2140,7 +2139,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfXQAS</stringValue>
+                <stringValue>0126t000000GrBJAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2195,7 +2194,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2307,7 +2306,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2348,7 +2347,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_6_myRule_1_A4_6567862674</elementReference>
+                <elementReference>formula_6_myRule_1_A4_2878853938</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2373,7 +2372,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2450,7 +2449,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfcQAC</stringValue>
+                <stringValue>0126t000000GrBGAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2505,7 +2504,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2617,7 +2616,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2658,7 +2657,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_5_myRule_1_A5_1143747451</elementReference>
+                <elementReference>formula_5_myRule_1_A5_3924169399</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2683,7 +2682,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2760,7 +2759,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfhQAC</stringValue>
+                <stringValue>0126t000000GrBIAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2815,7 +2814,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2927,7 +2926,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -2968,7 +2967,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_4_myRule_1_A6_0417050266</elementReference>
+                <elementReference>formula_4_myRule_1_A6_8488374359</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2993,7 +2992,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3070,7 +3069,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfmQAC</stringValue>
+                <stringValue>0126t000000GrBFAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3125,7 +3124,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3143,7 +3142,7 @@
     </recordCreates>
     <recordCreates>
         <name>myRule_1_A7</name>
-        <label>7: Determine Provider Actions</label>
+        <label>7: Notification of Audit Decision</label>
         <locationX>100</locationX>
         <locationY>800</locationY>
         <connector>
@@ -3176,7 +3175,7 @@
             </processMetadataValues>
             <field>Case_Activity_Type__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3237,7 +3236,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3278,7 +3277,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_3_myRule_1_A7_2613054525</elementReference>
+                <elementReference>formula_3_myRule_1_A7_8002718263</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3303,7 +3302,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3344,7 +3343,7 @@
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3380,7 +3379,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfrQAC</stringValue>
+                <stringValue>0126t000000GrBd</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3435,7 +3434,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3547,7 +3546,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3588,7 +3587,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A8_1058253941</elementReference>
+                <elementReference>formula_2_myRule_1_A8_5414786125</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3613,7 +3612,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3690,7 +3689,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfwQAC</stringValue>
+                <stringValue>0126t000000GrBLAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3745,7 +3744,7 @@
             <processMetadataValues>
                 <name>leftHandSideReferenceTo</name>
                 <value>
-                    <stringValue></stringValue>
+                    <stringValue/>
                 </value>
             </processMetadataValues>
             <processMetadataValues>
@@ -3793,7 +3792,6 @@
         <connector>
             <targetReference>myRule_1_A10</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>

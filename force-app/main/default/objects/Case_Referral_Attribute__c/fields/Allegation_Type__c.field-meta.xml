@@ -65,6 +65,46 @@
                 <default>false</default>
                 <label>Other</label>
             </value>
+            <value>
+                <fullName>No Documentation</fullName>
+                <default>false</default>
+                <label>No Documentation</label>
+            </value>
+            <value>
+                <fullName>Procedure Coding Error</fullName>
+                <default>false</default>
+                <label>Procedure Coding Error</label>
+            </value>
+            <value>
+                <fullName>Diagnosis Coding Error</fullName>
+                <default>false</default>
+                <label>Diagnosis Coding Error</label>
+            </value>
+            <value>
+                <fullName>Unbounding</fullName>
+                <default>false</default>
+                <label>Unbounding</label>
+            </value>
+            <value>
+                <fullName>Number of Unit(s)</fullName>
+                <default>false</default>
+                <label>Number of Unit(s)</label>
+            </value>
+            <value>
+                <fullName>Medically Unnecessary Service</fullName>
+                <default>false</default>
+                <label>Medically Unnecessary Service</label>
+            </value>
+            <value>
+                <fullName>Policy Violation</fullName>
+                <default>false</default>
+                <label>Policy Violation</label>
+            </value>
+            <value>
+                <fullName>Insufficient Documentation</fullName>
+                <default>false</default>
+                <label>Insufficient Documentation</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

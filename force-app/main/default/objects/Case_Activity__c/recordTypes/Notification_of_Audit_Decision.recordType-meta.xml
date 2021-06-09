@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Determine_Provider_Actions</fullName>
+    <fullName>Notification_of_Audit_Decision</fullName>
     <active>true</active>
-    <label>Determine Provider Actions</label>
+    <label>Notification of Audit Decision</label>
     <picklistValues>
         <picklist>Activity_Business_Status__c</picklist>
         <values>

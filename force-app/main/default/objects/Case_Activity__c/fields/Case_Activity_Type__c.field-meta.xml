@@ -136,9 +136,9 @@
                 <label>Evaluate Audit Findings</label>
             </value>
             <value>
-                <fullName>Determine Provider Actions</fullName>
+                <fullName>Notification of Audit Decision</fullName>
                 <default>false</default>
-                <label>Determine Provider Actions</label>
+                <label>Notification of Audit Decision</label>
             </value>
             <value>
                 <fullName>Reconsideration</fullName>
