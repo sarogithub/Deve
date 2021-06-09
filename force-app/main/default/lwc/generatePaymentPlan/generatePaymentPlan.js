@@ -153,7 +153,7 @@ export default class GeneratePaymentPlan extends LightningElement {
             this.isValid = true;
         }else{
             this.infoMessageTitle = 'No Change in Payment Plan Header';
-            this.infoMessageDescription = 'There is no change in Payment Plan Header. Kindly update the payment plan header details and click Refersh Button.'
+            this.infoMessageDescription = 'There is no change in Payment Plan Header. Kindly update the payment plan header details and click Refresh Button.'
             this.className = 'infoBox';
             this.iconName = 'utility:info';
             this.showInfoMessage = true;

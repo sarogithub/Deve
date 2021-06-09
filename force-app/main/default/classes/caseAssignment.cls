@@ -50,11 +50,14 @@ public class caseAssignment{
         system.debug('*******  Starting ******'+ caseSense.Entity_Type__c);
         system.debug('*******  mp_RCnme2RCId ******'+ mp_RCnme2RCId);
         system.debug('*******  Contains ******'+ mp_RCnme2RCId.containskey(caseSense.Entity_Type__c));
-        
+        System.debug(' ***recordTypeId *** ' + recType + '|' +  caseSense.recordTypeId);
+
         recType ='';
         if(caseSense.Entity_Type__c != NULL && caseSense.Entity_Type__c != ''){
             if(mp_RCnme2RCId.containskey(caseSense.Entity_Type__c)){
-                recType = caseSense.recordTypeId = mp_RCnme2RCId.get(caseSense.Entity_Type__c);
+                String recordTypeName = [SELECT Id, Name FROM RecordType
+                                WHERE Id =: mp_RCnme2RCId.get(caseSense.Entity_Type__c) AND sObjectType = 'Case_Associate__c'].Name;
+                recType = recordTypeName;
             } 
         }
         

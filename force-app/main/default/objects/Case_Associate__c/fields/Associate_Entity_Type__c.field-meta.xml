@@ -26,6 +26,21 @@
                 <default>false</default>
                 <label>Claim</label>
             </value>
+            <value>
+                <fullName>Rendering Provider</fullName>
+                <default>false</default>
+                <label>Rendering Provider</label>
+            </value>
+            <value>
+                <fullName>Billing Provider</fullName>
+                <default>false</default>
+                <label>Billing Provider</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

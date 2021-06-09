@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Business_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Business Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>On Hold - Internal</fullName>
+                <default>false</default>
+                <label>On Hold - Internal</label>
+            </value>
+            <value>
+                <fullName>MFCU Hold</fullName>
+                <default>false</default>
+                <label>MFCU Hold</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Document Attempt Successful</fullName>
+                <default>false</default>
+                <label>Document Attempt Successful</label>
+            </value>
+            <value>
+                <fullName>Credit Balance Reported</fullName>
+                <default>false</default>
+                <label>Credit Balance Reported</label>
+            </value>
+            <value>
+                <fullName>Provider Contact Unsuccessful</fullName>
+                <default>false</default>
+                <label>Provider Contact Unsuccessful</label>
+            </value>
+            <value>
+                <fullName>Case Referred</fullName>
+                <default>false</default>
+                <label>Case Referred</label>
+            </value>
+            <value>
+                <fullName>No Major Findings</fullName>
+                <default>false</default>
+                <label>No Major Findings</label>
+            </value>
+            <value>
+                <fullName>Audit Scheduled</fullName>
+                <default>false</default>
+                <label>Audit Scheduled</label>
+            </value>
+            <value>
+                <fullName>Audit Performed</fullName>
+                <default>false</default>
+                <label>Audit Performed</label>
+            </value>
+            <value>
+                <fullName>Client Audit Activity 1 Open</fullName>
+                <default>false</default>
+                <label>Client Audit Activity 1 Open</label>
+            </value>
+            <value>
+                <fullName>Client Audit Activity 1 Completed</fullName>
+                <default>false</default>
+                <label>Client Audit Activity 1 Completed</label>
+            </value>
+            <value>
+                <fullName>Client Audit Activity 2 Open</fullName>
+                <default>false</default>
+                <label>Client Audit Activity 2 Open</label>
+            </value>
+            <value>
+                <fullName>Client Audit Activity 2 Completed</fullName>
+                <default>false</default>
+                <label>Client Audit Activity 2 Completed</label>
+            </value>
+            <value>
+                <fullName>Trial Activity 1 Open</fullName>
+                <default>false</default>
+                <label>Trial Activity 1 Open</label>
+            </value>
+            <value>
+                <fullName>Trial Activity 1 Completed</fullName>
+                <default>false</default>
+                <label>Trial Activity 1 Completed</label>
+            </value>
+            <value>
+                <fullName>Trial Activity 2 Open</fullName>
+                <default>false</default>
+                <label>Trial Activity 2 Open</label>
+            </value>
+            <value>
+                <fullName>Trial Activity 2 Completed</fullName>
+                <default>false</default>
+                <label>Trial Activity 2 Completed</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <controllingFieldValue>Credit – Balance Recoupment</controllingFieldValue>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>On Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <controllingFieldValue>Credit – Balance Recoupment</controllingFieldValue>
+            <valueName>Case Referred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <valueName>No Major Findings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <valueName>Audit Scheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
+            <valueName>Audit Performed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <valueName>Client Audit Activity 1 Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <valueName>Client Audit Activity 1 Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <valueName>Client Audit Activity 2 Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Audit</controllingFieldValue>
+            <valueName>Client Audit Activity 2 Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit – Balance Recoupment</controllingFieldValue>
+            <valueName>Document Attempt Successful</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit – Balance Recoupment</controllingFieldValue>
+            <valueName>Credit Balance Reported</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit – Balance Recoupment</controllingFieldValue>
+            <valueName>Provider Contact Unsuccessful</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>On Hold - Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Trial Activity 1 Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Trial Activity 1 Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Trial Activity 2 Open</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trial Record Type</controllingFieldValue>
+            <valueName>Trial Activity 2 Completed</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

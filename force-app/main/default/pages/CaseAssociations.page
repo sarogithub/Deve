@@ -1,16 +1,20 @@
-<apex:page standardController="Account" extensions="CaseAssociationsController" id="casePage">
+<apex:page standardController="Account" extensions="CaseAssociationsController" id="casePage" showHeader="false"
+           standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0"
+           lightningStylesheets="true">
     
     <script>
-        function openCase(){
-            var s=document.getElementById("casePage:caseForm:NewCaseUrl").value;
-            parent.location=s;
-        }
-        
-        function openLinks(value){
-            window.open(value);
-        }
-    </script>
+    function openCase(){
+        var s=document.getElementById("casePage:caseForm:NewCaseUrl").value;
+        parent.location=s;
+    }
     
+    function openLinks(value){
+        window.open(value);
+    }
+    </script>
+    <!-- Import the Design System style sheet -->
+    <apex:slds />
+    <div class="slds-scope">
     <apex:form id="caseForm">
         <apex:inputhidden value="{!NewCaseUrl}" id="NewCaseUrl"/>
         <apex:pageBlock >
@@ -23,14 +27,15 @@
                     <apex:facet name="header">Case</apex:facet>
                 </apex:column>
                 
-                <apex:column >
+                <!--<apex:column >
                     <a href="javascript:(0)" onclick="openLinks('/{!c.Case_Number__r.AccountId}');" target="_blank">{!c.Case_Number__r.Account.Name}</a>
                     <apex:facet name="header">Primary Entity Name</apex:facet>
-                </apex:column>
+                    </apex:column>
+				-->
                 
                 <!--<apex:column value="{!c.Entity_Type__c}"/>-->
                 <apex:column value="{!c.Associate_Type__c}"/>
-                <apex:column value="{!c.Case_Number__r.Subject}"/>
+                <apex:column value="{!c.Case_Number__r.Type}"/>
                 <apex:column value="{!c.Case_Number__r.Status}"/>
                 <apex:column value="{!c.Case_Number__r.CreatedDate}"/>
                 <apex:column value="{!c.Case_Number__r.ClosedDate}"/>
@@ -41,4 +46,5 @@
             </apex:pageBlockTable>
         </apex:pageBlock>
     </apex:form>
+    </div>
 </apex:page>

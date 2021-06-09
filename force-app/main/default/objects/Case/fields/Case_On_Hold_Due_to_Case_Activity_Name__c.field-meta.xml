@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_On_Hold_Due_to_Case_Activity_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Case On Hold Due to Case Activity Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Perform Provider &amp; Claims Data Research</fullName>
+                <default>false</default>
+                <label>Perform Provider &amp; Claims Data Research</label>
+            </value>
+            <value>
+                <fullName>Identify Samples &amp; Methodology for Audit</fullName>
+                <default>false</default>
+                <label>Identify Samples &amp; Methodology for Audit</label>
+            </value>
+            <value>
+                <fullName>Perform Provider Self Review</fullName>
+                <default>false</default>
+                <label>Perform Provider Self Review</label>
+            </value>
+            <value>
+                <fullName>Evaluate Provider Findings</fullName>
+                <default>false</default>
+                <label>Evaluate Provider Findings</label>
+            </value>
+            <value>
+                <fullName>Perform DHSS PI Review/Audit</fullName>
+                <default>false</default>
+                <label>Perform DHSS PI Review/Audit</label>
+            </value>
+            <value>
+                <fullName>Evaluate Audit Findings</fullName>
+                <default>false</default>
+                <label>Evaluate Audit Findings</label>
+            </value>
+            <value>
+                <fullName>Determine Provider Actions</fullName>
+                <default>false</default>
+                <label>Determine Provider Actions</label>
+            </value>
+            <value>
+                <fullName>Reconsideration</fullName>
+                <default>false</default>
+                <label>Reconsideration</label>
+            </value>
+            <value>
+                <fullName>Provider Appeal</fullName>
+                <default>false</default>
+                <label>Provider Appeal</label>
+            </value>
+            <value>
+                <fullName>Recoupment/Financial Tracking</fullName>
+                <default>false</default>
+                <label>Recoupment/Financial Tracking</label>
+            </value>
+            <value>
+                <fullName>Dispose Case</fullName>
+                <default>false</default>
+                <label>Dispose Case</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

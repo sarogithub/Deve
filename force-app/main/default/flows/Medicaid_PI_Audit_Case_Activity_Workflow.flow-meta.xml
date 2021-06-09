@@ -2237,7 +2237,7 @@
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_52</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 5) AND 2 AND 3 AND 4</conditionLogic>
             <conditions>
                 <processMetadataValues>
                     <name>inputDataType</name>
@@ -2297,7 +2297,7 @@
                 <leftValueReference>myVariable_current.Case_Activity_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Determine Provider Actions</stringValue>
+                    <stringValue>Notification of Audit Decision</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -2360,6 +2360,37 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Medicaid PI Audit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Activity_Business_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Notification Not Acknowledged</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -2445,7 +2476,7 @@
                 <leftValueReference>myVariable_current.Case_Activity_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Determine Provider Actions</stringValue>
+                    <stringValue>Notification of Audit Decision</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -2593,7 +2624,7 @@
                 <leftValueReference>myVariable_current.Case_Activity_Type__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Determine Provider Actions</stringValue>
+                    <stringValue>Notification of Audit Decision</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -3415,6 +3446,9 @@
         <label>myDecision71</label>
         <locationX>50</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision74</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>default</defaultConnectorLabel>
         <rules>
             <name>myRule_72</name>
@@ -3547,6 +3581,151 @@
                 <targetReference>myRule_72_A1</targetReference>
             </connector>
             <label>WF25</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>25.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision74</name>
+        <label>myDecision74</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_75</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Case__r.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Medicaid PI Audit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Case_Activity_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reconsideration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Activity_Business_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Initiate Provider Appeal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_75_A1</targetReference>
+            </connector>
+            <label>WF22.1</label>
         </rules>
     </decisions>
     <decisions>
@@ -3704,7 +3883,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_10_A1_5630293953</name>
+        <name>formula_11_myRule_10_A1_4652851705</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -3715,7 +3894,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_14_myRule_13_A1_3395572595</name>
+        <name>formula_14_myRule_13_A1_8822042701</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3726,7 +3905,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_16_A1_8227459048</name>
+        <name>formula_17_myRule_16_A1_1109319281</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3737,7 +3916,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_19_A1_4695196568</name>
+        <name>formula_20_myRule_19_A1_4798118975</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3748,7 +3927,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_23_myRule_22_A1_1565541017</name>
+        <name>formula_23_myRule_22_A1_1253895096</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3759,7 +3938,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_26_myRule_25_A1_7724193620</name>
+        <name>formula_26_myRule_25_A1_4814037682</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3770,7 +3949,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_29_myRule_28_A1_6641337112</name>
+        <name>formula_29_myRule_28_A1_9143700686</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3781,7 +3960,7 @@
                 <stringValue>Today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5954177751</name>
+        <name>formula_2_myRule_1_A1_3759320846</name>
         <dataType>Date</dataType>
         <expression>Today()</expression>
     </formulas>
@@ -3792,7 +3971,7 @@
                 <stringValue>TODAY() </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_31_A1_5857856646</name>
+        <name>formula_32_myRule_31_A1_7643518986</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3803,7 +3982,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_35_myRule_34_A1_0337617288</name>
+        <name>formula_35_myRule_34_A1_8431416195</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3814,7 +3993,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_38_myRule_37_A2_8164862605</name>
+        <name>formula_38_myRule_37_A2_6614700578</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3825,7 +4004,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_41_myRule_40_A1_9616456025</name>
+        <name>formula_41_myRule_40_A1_3259886685</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3836,7 +4015,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_43_A1_1681128656</name>
+        <name>formula_44_myRule_43_A1_9811957307</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3847,7 +4026,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_47_myRule_46_A1_9502574254</name>
+        <name>formula_47_myRule_46_A1_3903492997</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3858,7 +4037,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_50_myRule_49_A1_5287093791</name>
+        <name>formula_50_myRule_49_A1_2589305070</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3869,7 +4048,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_53_myRule_52_A1_1019812824</name>
+        <name>formula_53_myRule_52_A1_2472898116</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3880,7 +4059,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_56_myRule_55_A1_0040424030</name>
+        <name>formula_56_myRule_55_A1_6168293146</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3891,7 +4070,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_59_myRule_58_A1_3702385352</name>
+        <name>formula_59_myRule_58_A1_8461947281</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3902,7 +4081,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_8773569279</name>
+        <name>formula_5_myRule_4_A1_8921753993</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -3913,7 +4092,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_62_myRule_61_A1_0011351680</name>
+        <name>formula_62_myRule_61_A1_9645367755</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3924,7 +4103,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_65_myRule_64_A1_3784108962</name>
+        <name>formula_65_myRule_64_A1_7785507501</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3935,7 +4114,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_68_myRule_67_A1_8358683397</name>
+        <name>formula_68_myRule_67_A1_1585433006</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3946,7 +4125,18 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_73_myRule_72_A1_7790727088</name>
+        <name>formula_73_myRule_72_A1_9058126754</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>TODAY()</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_76_myRule_75_A1_6935908907</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -3957,11 +4147,11 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_A1_8914097272</name>
+        <name>formula_8_myRule_7_A1_9928123513</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
-    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Workflow-1_InterviewLabel</interviewLabel>
+    <interviewLabel>Medicaid_PI_Audit_Case_Activity_Workflow-2_InterviewLabel</interviewLabel>
     <label>Medicaid PI Audit - Case Activity Workflow</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -4060,7 +4250,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_11_myRule_10_A1_5630293953</elementReference>
+                <elementReference>formula_11_myRule_10_A1_4652851705</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4223,7 +4413,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_14_myRule_13_A1_3395572595</elementReference>
+                <elementReference>formula_14_myRule_13_A1_8822042701</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4422,7 +4612,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_17_myRule_16_A1_8227459048</elementReference>
+                <elementReference>formula_17_myRule_16_A1_1109319281</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4621,7 +4811,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_20_myRule_19_A1_4695196568</elementReference>
+                <elementReference>formula_20_myRule_19_A1_4798118975</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -4778,7 +4968,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5954177751</elementReference>
+                <elementReference>formula_2_myRule_1_A1_3759320846</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5024,7 +5214,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_23_myRule_22_A1_1565541017</elementReference>
+                <elementReference>formula_23_myRule_22_A1_1253895096</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5140,7 +5330,7 @@
             </processMetadataValues>
             <field>Activities_to_enable__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -5223,7 +5413,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_26_myRule_25_A1_7724193620</elementReference>
+                <elementReference>formula_26_myRule_25_A1_4814037682</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5386,7 +5576,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_29_myRule_28_A1_6641337112</elementReference>
+                <elementReference>formula_29_myRule_28_A1_9143700686</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5585,7 +5775,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_32_myRule_31_A1_5857856646</elementReference>
+                <elementReference>formula_32_myRule_31_A1_7643518986</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5748,7 +5938,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_35_myRule_34_A1_0337617288</elementReference>
+                <elementReference>formula_35_myRule_34_A1_8431416195</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -5864,7 +6054,7 @@
             </processMetadataValues>
             <field>Activities_to_enable__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -6027,7 +6217,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_38_myRule_37_A2_8164862605</elementReference>
+                <elementReference>formula_38_myRule_37_A2_6614700578</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6110,7 +6300,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_41_myRule_40_A1_9616456025</elementReference>
+                <elementReference>formula_41_myRule_40_A1_3259886685</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6226,7 +6416,7 @@
             </processMetadataValues>
             <field>Activities_to_enable__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -6309,7 +6499,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_44_myRule_43_A1_1681128656</elementReference>
+                <elementReference>formula_44_myRule_43_A1_9811957307</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6472,7 +6662,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_47_myRule_46_A1_9502574254</elementReference>
+                <elementReference>formula_47_myRule_46_A1_3903492997</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6552,7 +6742,7 @@
             </processMetadataValues>
             <field>Activities_to_close__c</field>
             <value>
-                <stringValue>Determine Provider Actions; Reconsideration; Provider Appeal; Recoupment/Financial Tracking</stringValue>
+                <stringValue>Reconsideration; Provider Appeal; Recoupment/Financial Tracking; Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6671,7 +6861,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_50_myRule_49_A1_5287093791</elementReference>
+                <elementReference>formula_50_myRule_49_A1_2589305070</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6751,7 +6941,7 @@
             </processMetadataValues>
             <field>Activities_to_enable__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <object>Case</object>
@@ -6828,7 +7018,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_8773569279</elementReference>
+                <elementReference>formula_5_myRule_4_A1_8921753993</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -6991,7 +7181,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_53_myRule_52_A1_1019812824</elementReference>
+                <elementReference>formula_53_myRule_52_A1_2472898116</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7190,7 +7380,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_56_myRule_55_A1_0040424030</elementReference>
+                <elementReference>formula_56_myRule_55_A1_6168293146</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7237,42 +7427,6 @@
                 <elementReference>myVariable_current.Case__c</elementReference>
             </value>
         </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>MultiPicklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Activities to close</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue/>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>MultiPicklist</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Activities_to_close__c</field>
-            <value>
-                <stringValue>Provider Appeal</stringValue>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -7389,7 +7543,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_59_myRule_58_A1_3702385352</elementReference>
+                <elementReference>formula_59_myRule_58_A1_8461947281</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7588,7 +7742,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_62_myRule_61_A1_0011351680</elementReference>
+                <elementReference>formula_62_myRule_61_A1_9645367755</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7635,6 +7789,42 @@
                 <elementReference>myVariable_current.Case__c</elementReference>
             </value>
         </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Activities to close</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activities_to_close__c</field>
+            <value>
+                <stringValue>Provider Appeal</stringValue>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <processMetadataValues>
                 <name>dataType</name>
@@ -7751,7 +7941,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_65_myRule_64_A1_3784108962</elementReference>
+                <elementReference>formula_65_myRule_64_A1_7785507501</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -7831,7 +8021,7 @@
             </processMetadataValues>
             <field>Activities_to_close__c</field>
             <value>
-                <stringValue>Recoupment/Financial Tracking</stringValue>
+                <stringValue>Recoupment/Financial Tracking; Provider Appeal</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7950,7 +8140,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_68_myRule_67_A1_8358683397</elementReference>
+                <elementReference>formula_68_myRule_67_A1_1585433006</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -8229,7 +8419,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_73_myRule_72_A1_7790727088</elementReference>
+                <elementReference>formula_73_myRule_72_A1_9058126754</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -8339,6 +8529,169 @@
         <processMetadataValues>
             <name>referenceTargetField</name>
         </processMetadataValues>
+        <name>myRule_75_A1</name>
+        <label>Update Case Activity End Date</label>
+        <locationX>7500</locationX>
+        <locationY>200</locationY>
+        <connector>
+            <targetReference>myRule_75_A2</targetReference>
+        </connector>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Activity End Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activity_End_Date__c</field>
+            <value>
+                <elementReference>formula_76_myRule_75_A1_6935908907</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case_Activity__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Case_Activity__c].Case</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
+        <name>myRule_75_A2</name>
+        <label>Enable 10th Activity</label>
+        <locationX>7500</locationX>
+        <locationY>300</locationY>
+        <filters>
+            <processMetadataValues>
+                <name>implicit</name>
+                <value>
+                    <booleanValue>true</booleanValue>
+                </value>
+            </processMetadataValues>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>myVariable_current.Case__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Activities to enable</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue/>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>MultiPicklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Activities_to_enable__c</field>
+            <value>
+                <stringValue>Provider Appeal</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <processMetadataValues>
+            <name>evaluationType</name>
+            <value>
+                <stringValue>always</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>extraTypeInfo</name>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>isChildRelationship</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>reference</name>
+            <value>
+                <stringValue>[Case_Activity__c]</stringValue>
+            </value>
+        </processMetadataValues>
+        <processMetadataValues>
+            <name>referenceTargetField</name>
+        </processMetadataValues>
         <name>myRule_7_A1</name>
         <label>PAO:2 Update Activity End Date</label>
         <locationX>700</locationX>
@@ -8386,7 +8739,7 @@
             </processMetadataValues>
             <field>Activity_End_Date__c</field>
             <value>
-                <elementReference>formula_8_myRule_7_A1_8914097272</elementReference>
+                <elementReference>formula_8_myRule_7_A1_9928123513</elementReference>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>

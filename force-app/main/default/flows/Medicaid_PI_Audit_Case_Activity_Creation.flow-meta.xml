@@ -121,7 +121,7 @@
                 <stringValue>(TODAY() + 3)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_1_A1_2359392651</name>
+        <name>formula_10_myRule_1_A1_5530526776</name>
         <dataType>Date</dataType>
         <expression>(TODAY() + 3)</expression>
     </formulas>
@@ -132,7 +132,7 @@
                 <stringValue>today()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_1_A1_8046467636</name>
+        <name>formula_11_myRule_1_A1_5655969022</name>
         <dataType>Date</dataType>
         <expression>today()</expression>
     </formulas>
@@ -143,7 +143,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A8_9685648886</name>
+        <name>formula_2_myRule_1_A8_5414786125</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -154,7 +154,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_3_myRule_1_A7_4280960103</name>
+        <name>formula_3_myRule_1_A7_8002718263</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -165,7 +165,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_4_myRule_1_A6_5334284717</name>
+        <name>formula_4_myRule_1_A6_8488374359</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -176,7 +176,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_1_A5_1152179115</name>
+        <name>formula_5_myRule_1_A5_3924169399</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -187,7 +187,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_1_A4_9286990661</name>
+        <name>formula_6_myRule_1_A4_2878853938</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -198,7 +198,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_7_myRule_1_A3_2484604518</name>
+        <name>formula_7_myRule_1_A3_9291131998</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -209,7 +209,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_1_A2_6858801227</name>
+        <name>formula_8_myRule_1_A2_3096765836</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -220,7 +220,7 @@
                 <stringValue>[Case].Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_1_A1_3742327506</name>
+        <name>formula_9_myRule_1_A1_8244829991</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Id}</expression>
     </formulas>
@@ -292,7 +292,7 @@
             </processMetadataValues>
             <field>Activity_Due_Date__c</field>
             <value>
-                <elementReference>formula_10_myRule_1_A1_2359392651</elementReference>
+                <elementReference>formula_10_myRule_1_A1_5530526776</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -322,7 +322,7 @@
             </processMetadataValues>
             <field>Activity_Start_Date__c</field>
             <value>
-                <elementReference>formula_11_myRule_1_A1_8046467636</elementReference>
+                <elementReference>formula_11_myRule_1_A1_5655969022</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -454,7 +454,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_9_myRule_1_A1_3742327506</elementReference>
+                <elementReference>formula_9_myRule_1_A1_8244829991</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -872,7 +872,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002Aqg1QAC</stringValue>
+                <stringValue>0126t000000GrBKAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1194,7 +1194,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002Aqg6QAC</stringValue>
+                <stringValue>0126t000000GrBMAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1266,7 +1266,7 @@
             </processMetadataValues>
             <field>Supervisor_Approval_Status__c</field>
             <value>
-                <stringValue>Not Applicable</stringValue>
+                <stringValue>Applicable</stringValue>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
@@ -1727,7 +1727,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_8_myRule_1_A2_6858801227</elementReference>
+                <elementReference>formula_8_myRule_1_A2_3096765836</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1829,7 +1829,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfSQAS</stringValue>
+                <stringValue>0126t000000GrBHAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2037,7 +2037,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_7_myRule_1_A3_2484604518</elementReference>
+                <elementReference>formula_7_myRule_1_A3_9291131998</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2139,7 +2139,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfXQAS</stringValue>
+                <stringValue>0126t000000GrBJAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2347,7 +2347,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_6_myRule_1_A4_9286990661</elementReference>
+                <elementReference>formula_6_myRule_1_A4_2878853938</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2449,7 +2449,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfcQAC</stringValue>
+                <stringValue>0126t000000GrBGAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2657,7 +2657,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_5_myRule_1_A5_1152179115</elementReference>
+                <elementReference>formula_5_myRule_1_A5_3924169399</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2759,7 +2759,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfhQAC</stringValue>
+                <stringValue>0126t000000GrBIAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2967,7 +2967,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_4_myRule_1_A6_5334284717</elementReference>
+                <elementReference>formula_4_myRule_1_A6_8488374359</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3040,6 +3040,42 @@
             <processMetadataValues>
                 <name>dataType</name>
                 <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Record Type ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>RecordType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0126t000000GrBFAA0</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
                     <stringValue>Picklist</stringValue>
                 </value>
             </processMetadataValues>
@@ -3099,14 +3135,14 @@
             </processMetadataValues>
             <field>Supervisor_Approval_Status__c</field>
             <value>
-                <stringValue>Not Applicable</stringValue>
+                <stringValue>Applicable</stringValue>
             </value>
         </inputAssignments>
         <object>Case_Activity__c</object>
     </recordCreates>
     <recordCreates>
         <name>myRule_1_A7</name>
-        <label>7: Determine Provider Actions</label>
+        <label>7: Notification of Audit Decision</label>
         <locationX>100</locationX>
         <locationY>800</locationY>
         <connector>
@@ -3139,7 +3175,7 @@
             </processMetadataValues>
             <field>Case_Activity_Type__c</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3241,7 +3277,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_3_myRule_1_A7_4280960103</elementReference>
+                <elementReference>formula_3_myRule_1_A7_8002718263</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3307,7 +3343,7 @@
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <stringValue>Determine Provider Actions</stringValue>
+                <stringValue>Notification of Audit Decision</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3343,7 +3379,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfrQAC</stringValue>
+                <stringValue>0126t000000GrBd</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3551,7 +3587,7 @@
             </processMetadataValues>
             <field>Case__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A8_9685648886</elementReference>
+                <elementReference>formula_2_myRule_1_A8_5414786125</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3653,7 +3689,7 @@
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <stringValue>0120U000002AqfwQAC</stringValue>
+                <stringValue>0126t000000GrBLAA0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3802,7 +3838,7 @@
         <object>Case</object>
     </recordUpdates>
     <startElementReference>myDecision</startElementReference>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>myVariable_current</name>
         <dataType>SObject</dataType>

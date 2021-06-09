@@ -4,19 +4,23 @@ trigger colloCodeTrigger on Collo_Codes__c (before insert, before update) {
     set<Id> errorCaseId = new set<Id>();
     set<Id> errorCaseIdCount = new set<Id>();
     set<Id> ccId = new set<Id>();
+    Map<Id, Case> caseDetailsMap = new Map<Id, Case>();
 
     for(Collo_Codes__c cc : trigger.new){
         if(cc.Case__c != null){
             system.debug(' cc.Amount__c '+ cc.Amount__c);
+            system.debug(' cc.Id -> '+ cc.Id);
+
             caseIdAndAmount.put(cc.Case__c, cc.Amount__c);
             ccId.add(cc.Id);
         }
     }
     
     system.debug(' caseId -> '+ caseIdAndAmount);
+    system.debug(' ccId -> '+ ccId);
 
     if(caseIdAndAmount.size() > 0){
-        Map<Id, Case> caseDetailsMap = new Map<Id, Case>(
+        caseDetailsMap = new Map<Id, Case>(
             [SELECT Id, Total_Overpayment__c
                                   FROM Case WHERE Id In: caseIdAndAmount.keyset()]
         );
@@ -67,24 +71,34 @@ trigger colloCodeTrigger on Collo_Codes__c (before insert, before update) {
             }
                         
             if(errorCaseIdCount.size() <= 0){
-                for (AggregateResult ar : [SELECT Case__c, SUM(Amount__c)
+                if([SELECT Id FROM Collo_Codes__c WHERE Case__c IN: caseIdAndAmount.keyset()].size() <= 0){
+                    for(Id csId : caseIdAndAmount.keyset()){
+                        if(caseDetailsMap.containsKey(csId)){
+                            if(caseIdAndAmount.get(csId) > caseDetailsMap.get(csId).Total_Overpayment__c){
+                                errorCaseId.add(csId);
+                            }
+                        }
+                    }
+                }else{
+                    for(AggregateResult ar : [SELECT Case__c, SUM(Amount__c)
                                             FROM Collo_Codes__c
                                             WHERE Case__c IN: caseIdAndAmount.keyset() 
-                                            AND Id NOT IN: ccId
+                                            //AND Id NOT IN: ccId
                                             GROUP BY Case__c]){
-                    Id caseId = (Id)ar.get('Case__c');
-                    if(caseDetailsMap.containsKey(caseId)){
-                        Decimal amount = caseDetailsMap.get(caseId).Total_Overpayment__c;
-                        Decimal agrValue = (Decimal)ar.get('expr0');
-                        system.debug(' amount  '+ amount );
-                        system.debug(' agrValue '+ agrValue );
-                        
-                        if(caseIdAndAmount.containsKey(caseId)){
-                            agrValue = agrValue + caseIdAndAmount.get(caseId);
-                        }
-                        
-                        if(agrValue > amount){
-                            errorCaseId.add(caseId);
+                        Id caseId = (Id)ar.get('Case__c');
+                        if(caseDetailsMap.containsKey(caseId)){
+                            Decimal amount = caseDetailsMap.get(caseId).Total_Overpayment__c;
+                            Decimal agrValue = (Decimal)ar.get('expr0');
+                            system.debug(' amount  '+ amount );
+                            system.debug(' agrValue '+ agrValue );
+                            
+                            if(caseIdAndAmount.containsKey(caseId)){
+                                agrValue = agrValue + caseIdAndAmount.get(caseId);
+                            }
+                            
+                            if(agrValue > amount){
+                                errorCaseId.add(caseId);
+                            }
                         }
                     }
                 }

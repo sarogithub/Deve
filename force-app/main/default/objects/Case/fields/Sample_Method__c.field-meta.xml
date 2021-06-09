@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sample_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Sample Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>simple</fullName>
+                <default>false</default>
+                <label>Simple</label>
+            </value>
+            <value>
+                <fullName>systematic</fullName>
+                <default>false</default>
+                <label>Systematic</label>
+            </value>
+            <value>
+                <fullName>stratified</fullName>
+                <default>false</default>
+                <label>Stratified</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

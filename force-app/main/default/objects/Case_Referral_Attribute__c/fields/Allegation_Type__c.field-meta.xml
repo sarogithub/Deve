@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allegation_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Allegation Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing Error</fullName>
+                <default>false</default>
+                <label>Billing Error</label>
+            </value>
+            <value>
+                <fullName>Upcoding/Miscoding</fullName>
+                <default>false</default>
+                <label>Upcoding/Miscoding</label>
+            </value>
+            <value>
+                <fullName>Coordination of Benefits Error-TPL</fullName>
+                <default>false</default>
+                <label>Coordination of Benefits Error-TPL</label>
+            </value>
+            <value>
+                <fullName>Coordination of Benefits Error-Patient</fullName>
+                <default>false</default>
+                <label>Coordination of Benefits Error-Patient</label>
+            </value>
+            <value>
+                <fullName>Asset/Liability</fullName>
+                <default>false</default>
+                <label>Asset/Liability</label>
+            </value>
+            <value>
+                <fullName>Medically Unnecessary Services</fullName>
+                <default>false</default>
+                <label>Medically Unnecessary Services</label>
+            </value>
+            <value>
+                <fullName>Documentation Insufficient</fullName>
+                <default>false</default>
+                <label>Documentation Insufficient</label>
+            </value>
+            <value>
+                <fullName>Provider Error</fullName>
+                <default>false</default>
+                <label>Provider Error</label>
+            </value>
+            <value>
+                <fullName>Analytic-Outlier</fullName>
+                <default>false</default>
+                <label>Analytic-Outlier</label>
+            </value>
+            <value>
+                <fullName>Duplicate Payment</fullName>
+                <default>false</default>
+                <label>Duplicate Payment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>No Documentation</fullName>
+                <default>false</default>
+                <label>No Documentation</label>
+            </value>
+            <value>
+                <fullName>Procedure Coding Error</fullName>
+                <default>false</default>
+                <label>Procedure Coding Error</label>
+            </value>
+            <value>
+                <fullName>Diagnosis Coding Error</fullName>
+                <default>false</default>
+                <label>Diagnosis Coding Error</label>
+            </value>
+            <value>
+                <fullName>Unbounding</fullName>
+                <default>false</default>
+                <label>Unbounding</label>
+            </value>
+            <value>
+                <fullName>Number of Unit(s)</fullName>
+                <default>false</default>
+                <label>Number of Unit(s)</label>
+            </value>
+            <value>
+                <fullName>Medically Unnecessary Service</fullName>
+                <default>false</default>
+                <label>Medically Unnecessary Service</label>
+            </value>
+            <value>
+                <fullName>Policy Violation</fullName>
+                <default>false</default>
+                <label>Policy Violation</label>
+            </value>
+            <value>
+                <fullName>Insufficient Documentation</fullName>
+                <default>false</default>
+                <label>Insufficient Documentation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

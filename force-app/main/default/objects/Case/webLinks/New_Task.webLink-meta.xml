@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Task</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Task</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://na73.salesforce.com/00T/e?who_id=0031I000003GJwJ&amp;what_id=5001I000002SBy4&amp;retURL=%2F5001I000002SBy4</url>
+</WebLink>

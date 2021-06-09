@@ -2,6 +2,8 @@
 public with sharing class ColloCodeTriggerTest {
     @isTest
     static void ColloCodeAmountExceedOverPayment(){
+        Id recordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Medicaid PI Audit').getRecordTypeId();
+
         Case csWeekly1 = new Case(
             Case_Name__c = 'Test Case 1',
             No_Of_Installment__c = 2,
@@ -9,7 +11,8 @@ public with sharing class ColloCodeTriggerTest {
             Payment_Plan__c = 'Yes',
             PP_Type__c = 'Weekly',
             Total_PP_Amount__c = 15000,
-            Total_Overpayment__c = 20
+            Total_Overpayment__c = 20,
+            RecordTypeId = recordTypeId 
         );
         insert csWeekly1;
 
@@ -23,6 +26,8 @@ public with sharing class ColloCodeTriggerTest {
 
     @isTest
     static void ZeroOverPayment(){
+        Id recordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Medicaid PI Audit').getRecordTypeId();
+
         Case csWeekly2 = new Case(
             Case_Name__c = 'Test Case 1',
             No_Of_Installment__c = 2,
@@ -30,7 +35,8 @@ public with sharing class ColloCodeTriggerTest {
             Payment_Plan__c = 'Yes',
             PP_Type__c = 'Weekly',
             Total_PP_Amount__c = 15000,
-            Total_Overpayment__c = 0
+            Total_Overpayment__c = 0,
+            RecordTypeId = recordTypeId 
         );
         insert csWeekly2;
 
@@ -44,6 +50,8 @@ public with sharing class ColloCodeTriggerTest {
 
     @isTest
     static void AggregateValue(){
+        Id recordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Medicaid PI Audit').getRecordTypeId();
+
         Case csWeekly2 = new Case(
             Case_Name__c = 'Test Case 1',
             No_Of_Installment__c = 2,
@@ -51,7 +59,8 @@ public with sharing class ColloCodeTriggerTest {
             Payment_Plan__c = 'Yes',
             PP_Type__c = 'Weekly',
             Total_PP_Amount__c = 15000,
-            Total_Overpayment__c = 30
+            Total_Overpayment__c = 30,
+            RecordTypeId = recordTypeId 
         );
         insert csWeekly2;
 
@@ -72,6 +81,8 @@ public with sharing class ColloCodeTriggerTest {
 
     @isTest
     static void MorethanSixColloCode(){
+        Id recordTypeId = Schema.SObjectType.Case.getRecordTypeInfosByName().get('Medicaid PI Audit').getRecordTypeId();
+
         Case csWeekly2 = new Case(
             Case_Name__c = 'Test Case 1',
             No_Of_Installment__c = 2,
@@ -79,7 +90,8 @@ public with sharing class ColloCodeTriggerTest {
             Payment_Plan__c = 'Yes',
             PP_Type__c = 'Weekly',
             Total_PP_Amount__c = 15000,
-            Total_Overpayment__c = 10
+            Total_Overpayment__c = 10,
+            RecordTypeId = recordTypeId 
         );
         insert csWeekly2;
 

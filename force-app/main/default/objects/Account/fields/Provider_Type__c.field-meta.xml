@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provider_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Provider Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Hospital</fullName>
+                <default>false</default>
+                <label>General Hospital</label>
+            </value>
+            <value>
+                <fullName>Inpatient Psychiatric Hospital</fullName>
+                <default>false</default>
+                <label>Inpatient Psychiatric Hospital</label>
+            </value>
+            <value>
+                <fullName>Residential Psychiatric Treatment Center</fullName>
+                <default>false</default>
+                <label>Residential Psychiatric Treatment Center</label>
+            </value>
+            <value>
+                <fullName>Comprehensive Outpatient Rehab Facility</fullName>
+                <default>false</default>
+                <label>Comprehensive Outpatient Rehab Facility</label>
+            </value>
+            <value>
+                <fullName>Tribal Hospital</fullName>
+                <default>false</default>
+                <label>Tribal Hospital</label>
+            </value>
+            <value>
+                <fullName>Tribal Clinic</fullName>
+                <default>false</default>
+                <label>Tribal Clinic</label>
+            </value>
+            <value>
+                <fullName>SNF/ICF Facility</fullName>
+                <default>false</default>
+                <label>SNF/ICF Facility</label>
+            </value>
+            <value>
+                <fullName>ICF Facility</fullName>
+                <default>false</default>
+                <label>ICF Facility</label>
+            </value>
+            <value>
+                <fullName>Physician (MD)</fullName>
+                <default>false</default>
+                <label>Physician (MD)</label>
+            </value>
+            <value>
+                <fullName>Health Professional Group</fullName>
+                <default>false</default>
+                <label>Health Professional Group</label>
+            </value>
+            <value>
+                <fullName>Chiropractor</fullName>
+                <default>false</default>
+                <label>Chiropractor</label>
+            </value>
+            <value>
+                <fullName>Intermed Care Facility Mentally Retarded</fullName>
+                <default>false</default>
+                <label>Intermed Care Facility Mentally Retarded</label>
+            </value>
+            <value>
+                <fullName>Dentist</fullName>
+                <default>false</default>
+                <label>Dentist</label>
+            </value>
+            <value>
+                <fullName>Physician Assistant</fullName>
+                <default>false</default>
+                <label>Physician Assistant</label>
+            </value>
+            <value>
+                <fullName>Advanced Practice Registered Nurse</fullName>
+                <default>false</default>
+                <label>Advanced Practice Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Optometrist</fullName>
+                <default>false</default>
+                <label>Optometrist</label>
+            </value>
+            <value>
+                <fullName>Podiatrist</fullName>
+                <default>false</default>
+                <label>Podiatrist</label>
+            </value>
+            <value>
+                <fullName>Physical Therapist</fullName>
+                <default>false</default>
+                <label>Physical Therapist</label>
+            </value>
+            <value>
+                <fullName>Speech Therapist / Language Pathologist</fullName>
+                <default>false</default>
+                <label>Speech Therapist / Language Pathologist</label>
+            </value>
+            <value>
+                <fullName>Occupational Therapist</fullName>
+                <default>false</default>
+                <label>Occupational Therapist</label>
+            </value>
+            <value>
+                <fullName>Psychologist</fullName>
+                <default>false</default>
+                <label>Psychologist</label>
+            </value>
+            <value>
+                <fullName>Audiologist</fullName>
+                <default>false</default>
+                <label>Audiologist</label>
+            </value>
+            <value>
+                <fullName>Hearing Aid Supplier</fullName>
+                <default>false</default>
+                <label>Hearing Aid Supplier</label>
+            </value>
+            <value>
+                <fullName>Outpatient Occ, Speech, and PT center</fullName>
+                <default>false</default>
+                <label>Outpatient Occ, Speech, and PT center</label>
+            </value>
+            <value>
+                <fullName>Direct Entry Midwife</fullName>
+                <default>false</default>
+                <label>Direct Entry Midwife</label>
+            </value>
+            <value>
+                <fullName>Home Community Based Agency</fullName>
+                <default>false</default>
+                <label>Home Community Based Agency</label>
+            </value>
+            <value>
+                <fullName>Residential Supported Living Arrangement</fullName>
+                <default>false</default>
+                <label>Residential Supported Living Arrangement</label>
+            </value>
+            <value>
+                <fullName>Environmental Modifications</fullName>
+                <default>false</default>
+                <label>Environmental Modifications</label>
+            </value>
+            <value>
+                <fullName>School Based Services</fullName>
+                <default>false</default>
+                <label>School Based Services</label>
+            </value>
+            <value>
+                <fullName>Federally Qualified Health Center</fullName>
+                <default>false</default>
+                <label>Federally Qualified Health Center</label>
+            </value>
+            <value>
+                <fullName>Public Health Services</fullName>
+                <default>false</default>
+                <label>Public Health Services</label>
+            </value>
+            <value>
+                <fullName>Behavioral Health Aide-Practitioner</fullName>
+                <default>false</default>
+                <label>Behavioral Health Aide-Practitioner</label>
+            </value>
+            <value>
+                <fullName>Family Planning Clinic</fullName>
+                <default>false</default>
+                <label>Family Planning Clinic</label>
+            </value>
+            <value>
+                <fullName>Community Health Aide/Practitioner</fullName>
+                <default>false</default>
+                <label>Community Health Aide/Practitioner</label>
+            </value>
+            <value>
+                <fullName>Rural Health Clinic</fullName>
+                <default>false</default>
+                <label>Rural Health Clinic</label>
+            </value>
+            <value>
+                <fullName>Targeted Case Management</fullName>
+                <default>false</default>
+                <label>Targeted Case Management</label>
+            </value>
+            <value>
+                <fullName>Private Duty Nursing Agency</fullName>
+                <default>false</default>
+                <label>Private Duty Nursing Agency</label>
+            </value>
+            <value>
+                <fullName>Hospice</fullName>
+                <default>false</default>
+                <label>Hospice</label>
+            </value>
+            <value>
+                <fullName>Home Health Agency</fullName>
+                <default>false</default>
+                <label>Home Health Agency</label>
+            </value>
+            <value>
+                <fullName>Care Coordination Agency</fullName>
+                <default>false</default>
+                <label>Care Coordination Agency</label>
+            </value>
+            <value>
+                <fullName>Ambulatory Surgical Center</fullName>
+                <default>false</default>
+                <label>Ambulatory Surgical Center</label>
+            </value>
+            <value>
+                <fullName>Licensed Practical Nurse</fullName>
+                <default>false</default>
+                <label>Licensed Practical Nurse</label>
+            </value>
+            <value>
+                <fullName>Registered Nurse</fullName>
+                <default>false</default>
+                <label>Registered Nurse</label>
+            </value>
+            <value>
+                <fullName>Public Health Nurse</fullName>
+                <default>false</default>
+                <label>Public Health Nurse</label>
+            </value>
+            <value>
+                <fullName>EPSDT Screeners</fullName>
+                <default>false</default>
+                <label>EPSDT Screeners</label>
+            </value>
+            <value>
+                <fullName>Care Coordinator</fullName>
+                <default>false</default>
+                <label>Care Coordinator</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Prosthetic &amp; Orthotic Supplier</fullName>
+                <default>false</default>
+                <label>Prosthetic &amp; Orthotic Supplier</label>
+            </value>
+            <value>
+                <fullName>Respiratory Therapist</fullName>
+                <default>false</default>
+                <label>Respiratory Therapist</label>
+            </value>
+            <value>
+                <fullName>Vision Contractor</fullName>
+                <default>false</default>
+                <label>Vision Contractor</label>
+            </value>
+            <value>
+                <fullName>Optician</fullName>
+                <default>false</default>
+                <label>Optician</label>
+            </value>
+            <value>
+                <fullName>Medical Supplier</fullName>
+                <default>false</default>
+                <label>Medical Supplier</label>
+            </value>
+            <value>
+                <fullName>Home Infusion Therapy</fullName>
+                <default>false</default>
+                <label>Home Infusion Therapy</label>
+            </value>
+            <value>
+                <fullName>Independent Laboratory</fullName>
+                <default>false</default>
+                <label>Independent Laboratory</label>
+            </value>
+            <value>
+                <fullName>Radiology Provider</fullName>
+                <default>false</default>
+                <label>Radiology Provider</label>
+            </value>
+            <value>
+                <fullName>Ground Ambulance Service</fullName>
+                <default>false</default>
+                <label>Ground Ambulance Service</label>
+            </value>
+            <value>
+                <fullName>Taxi</fullName>
+                <default>false</default>
+                <label>Taxi</label>
+            </value>
+            <value>
+                <fullName>Travel Agency or Business</fullName>
+                <default>false</default>
+                <label>Travel Agency or Business</label>
+            </value>
+            <value>
+                <fullName>Airline</fullName>
+                <default>false</default>
+                <label>Airline</label>
+            </value>
+            <value>
+                <fullName>Wheelchair Van Services</fullName>
+                <default>false</default>
+                <label>Wheelchair Van Services</label>
+            </value>
+            <value>
+                <fullName>Prematernal Home</fullName>
+                <default>false</default>
+                <label>Prematernal Home</label>
+            </value>
+            <value>
+                <fullName>Hotel/Motel with Restaurant</fullName>
+                <default>false</default>
+                <label>Hotel/Motel with Restaurant</label>
+            </value>
+            <value>
+                <fullName>Hotel/Motel without Restaurant</fullName>
+                <default>false</default>
+                <label>Hotel/Motel without Restaurant</label>
+            </value>
+            <value>
+                <fullName>Travel Business/Broker</fullName>
+                <default>false</default>
+                <label>Travel Business/Broker</label>
+            </value>
+            <value>
+                <fullName>Personal Care Assistant</fullName>
+                <default>false</default>
+                <label>Personal Care Assistant</label>
+            </value>
+            <value>
+                <fullName>Personal Care Agency</fullName>
+                <default>false</default>
+                <label>Personal Care Agency</label>
+            </value>
+            <value>
+                <fullName>Personal Care Nurse</fullName>
+                <default>false</default>
+                <label>Personal Care Nurse</label>
+            </value>
+            <value>
+                <fullName>Free Standing Birthing Center</fullName>
+                <default>false</default>
+                <label>Free Standing Birthing Center</label>
+            </value>
+            <value>
+                <fullName>Other Trans-Ferry Train Hovercraft etc</fullName>
+                <default>false</default>
+                <label>Other Trans-Ferry Train Hovercraft etc</label>
+            </value>
+            <value>
+                <fullName>Airline Charter</fullName>
+                <default>false</default>
+                <label>Airline Charter</label>
+            </value>
+            <value>
+                <fullName>Air Ambulance</fullName>
+                <default>false</default>
+                <label>Air Ambulance</label>
+            </value>
+            <value>
+                <fullName>Licensed Clinical Social Worker</fullName>
+                <default>false</default>
+                <label>Licensed Clinical Social Worker</label>
+            </value>
+            <value>
+                <fullName>Behavioral Health</fullName>
+                <default>false</default>
+                <label>Behavioral Health</label>
+            </value>
+            <value>
+                <fullName>Behavioral Rehabilitation Services Center</fullName>
+                <default>false</default>
+                <label>Behavioral Rehabilitation Services Center</label>
+            </value>
+            <value>
+                <fullName>Dental Health Aide Therapist</fullName>
+                <default>false</default>
+                <label>Dental Health Aide Therapist</label>
+            </value>
+            <value>
+                <fullName>ESRD Free Standing or Indep Facility</fullName>
+                <default>false</default>
+                <label>ESRD Free Standing or Indep Facility</label>
+            </value>
+            <value>
+                <fullName>Nutritionist</fullName>
+                <default>false</default>
+                <label>Nutritionist</label>
+            </value>
+            <value>
+                <fullName>Dietician</fullName>
+                <default>false</default>
+                <label>Dietician</label>
+            </value>
+            <value>
+                <fullName>Certified Registered Nurse Anesthetist</fullName>
+                <default>false</default>
+                <label>Certified Registered Nurse Anesthetist</label>
+            </value>
+            <value>
+                <fullName>Dispensing Provider Conversion Only</fullName>
+                <default>false</default>
+                <label>Dispensing Provider Conversion Only</label>
+            </value>
+            <value>
+                <fullName>Day Treatment Conversion Only</fullName>
+                <default>false</default>
+                <label>Day Treatment Conversion Only</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse Rehab Conversion Only</fullName>
+                <default>false</default>
+                <label>Substance Abuse Rehab Conversion Only</label>
+            </value>
+            <value>
+                <fullName>Board Certified  Behavior Analyst</fullName>
+                <default>false</default>
+                <label>Board Certified  Behavior Analyst</label>
+            </value>
+            <value>
+                <fullName>Board Certified Asst Behavior Analyst</fullName>
+                <default>false</default>
+                <label>Board Certified Asst Behavior Analyst</label>
+            </value>
+            <value>
+                <fullName>Autism Behavior Technician</fullName>
+                <default>false</default>
+                <label>Autism Behavior Technician</label>
+            </value>
+            <value>
+                <fullName>Psychiatrist</fullName>
+                <default>false</default>
+                <label>Psychiatrist</label>
+            </value>
+            <value>
+                <fullName>Licensed Marriage and Family Counselor</fullName>
+                <default>false</default>
+                <label>Licensed Marriage and Family Counselor</label>
+            </value>
+            <value>
+                <fullName>Licensed Professional Counselor</fullName>
+                <default>false</default>
+                <label>Licensed Professional Counselor</label>
+            </value>
+            <value>
+                <fullName>Peer Support Specialist</fullName>
+                <default>false</default>
+                <label>Peer Support Specialist</label>
+            </value>
+            <value>
+                <fullName>Substance Use Disorder Counselor</fullName>
+                <default>false</default>
+                <label>Substance Use Disorder Counselor</label>
+            </value>
+            <value>
+                <fullName>Behavioral Health Clinical Associate</fullName>
+                <default>false</default>
+                <label>Behavioral Health Clinical Associate</label>
+            </value>
+            <value>
+                <fullName>MH Professional Clinician</fullName>
+                <default>false</default>
+                <label>MH Professional Clinician</label>
+            </value>
+            <value>
+                <fullName>pharmacist</fullName>
+                <default>false</default>
+                <label>pharmacist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
