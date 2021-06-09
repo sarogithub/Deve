@@ -1,0 +1,16 @@
+div.ex1 {
+    height: 300px;
+    overflow-y: scroll;
+    width: calc(100% - 10px);
+}
+
+
+.pTag {
+    text-decoration: underline;
+    color: #014486;
+    cursor: pointer;
+}
+
+.noRecords{
+    text-align: center;
+}
