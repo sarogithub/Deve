@@ -1,0 +1,9 @@
+Hi, 
+
+Please find the below payment plan details which is due on {!Payment_Plan_Detail__c.Payment_Due_Date__c}
+
+No of Installment : {!Payment_Plan_Detail__c.Installment__c}
+Amount : {!Payment_Plan_Detail__c.Amount_to_Repaid__c}
+Comments : {!Payment_Plan_Detail__c.Comments__c}
+
+Thanks
