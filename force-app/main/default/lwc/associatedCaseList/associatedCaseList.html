@@ -1,0 +1,53 @@
+<template>
+    <lightning-card variant="Narrow" title="Associate Cases" icon-name="standard:account">
+        <div class="ex1" if:true={hasData}>
+            <template for:each={caseAssociateArray} for:item="caseAssociate">
+                    <div class="slds-var-p-left_medium slds-var-p-right_medium"  key={caseAssociate.Id}>
+                        <ul class="slds-has-dividers_bottom-space">
+                            <li class="slds-item">
+                                <lightning-tile>
+                                    <dl class="slds-dl_horizontal slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                            <p class="slds-truncate" title="Company">Case Number: </p>
+                                        </dt>
+                                        <dd class="slds-item_detail slds-truncate">
+                                            <p class="slds-truncate pTag" title={caseAssociate.Case_Number__r.Type} 
+                                                data-id={caseAssociate.Case_Number__r.Id} 
+                                                data-objectname="Case"
+                                                onclick={openTab}>
+                                                {caseAssociate.Case_Number__r.CaseNumber}
+                                            </p>
+                                        </dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                            <p class="slds-truncate" title="Company">Case Type: </p>
+                                        </dt>
+                                        <dd class="slds-item_detail slds-truncate">
+                                            <p class="slds-truncate" title={caseAssociate.Case_Number__r.Type}>{caseAssociate.Case_Number__r.Type}</p>
+                                        </dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                            <p class="slds-truncate" title="Email">Entity Name: </p>
+                                        </dt>
+                                        <dd class="slds-item_detail slds-truncate">
+                                            <p class="slds-truncate pTag" title={caseAssociate.Entity1__r.Name}
+                                                data-id={caseAssociate.Entity1__r.Id} 
+                                                data-objectname="Account"
+                                                onclick={openTab}>
+                                                {caseAssociate.Entity1__r.Name}
+                                            </p>
+                                        </dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                                            <p class="slds-truncate" title="Email">Associate Type: </p>
+                                        </dt>
+                                        <dd class="slds-item_detail slds-truncate">
+                                            <p class="slds-truncate" title={caseAssociate.Entity1__r.Name}>{caseAssociate.Associate_Type__c}</p>
+                                        </dd>
+                                    </dl>
+                                </lightning-tile>
+                            </li>
+                        </ul>
+                    </div>
+            </template>
+        </div>
+        <div if:false={hasData} class="noRecords"> No Records </div>
+    </lightning-card>
+</template>
