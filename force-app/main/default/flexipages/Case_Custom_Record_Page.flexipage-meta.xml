@@ -41,6 +41,11 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>associatedCaseList</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>parentFieldApiName</name>
                     <value>Case.Id</value>

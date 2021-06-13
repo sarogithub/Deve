@@ -16,7 +16,7 @@ public with sharing class associatedCaseList {
 
             if(entityIds.size() > 0){
                 for(Case_Associate__c caseAssociate : [SELECT Id, Entity1__r.Id,
-                    Entity1__r.Name, Case_URL__c, Entity_URL__c, Case_Number__r.Id,
+                    Entity1__r.Name, Case_Number__r.Id,
                     Case_Number__r.Type, Case_Number__r.CaseNumber, 
                     Case_Number__r.Source__c, Case_Number__r.Origin, 
                     Case_Number__r.Review_Start_Date__c, Case_Number__r.Status, 
