@@ -5,6 +5,7 @@
     <externalId>false</externalId>
     <label>Case Number</label>
     <referenceTo>Case</referenceTo>
+    <relationshipLabel>Associated Entity</relationshipLabel>
     <relationshipName>Case_Associates</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
