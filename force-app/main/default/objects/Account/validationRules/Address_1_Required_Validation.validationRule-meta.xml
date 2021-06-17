@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_1_Required_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( 
+	ISBLANK( BillingStreet ), 
+	ISBLANK( BillingPostalCode ), 
+	ISBLANK( BillingCity ), 
+	ISBLANK( BillingCountry ) 
+	)</errorConditionFormula>
+    <errorMessage>Please fill the address 1 details</errorMessage>
+</ValidationRule>
