@@ -20,7 +20,7 @@ public class OI_PrimaryAssociateType_Test {
         // ca.name = 'test Name';
         ca.Case_Number__c = Cs.Id;
         ca.Associate_Type__c = 'Secondary';
-        ca.Entity_Type__c = 'Provider';
+        ca.Entity_Type__c = 'Billing Provider';
         boolean b = false;
         for(Apexpages.Message thisMsg : ApexPages.getMessages()){
             system.assert(thisMsg.getDetail().contains('Primary Associate Type was Already Created. So Please Choose "Secondary" or "Other" '));
@@ -33,7 +33,7 @@ public class OI_PrimaryAssociateType_Test {
         Map<Id,Case_Associate__c> accMap = New Map<Id,Case_Associate__c>();
         Case_Associate__c ca2 = New Case_Associate__c();
         ca2.Case_Number__c = cs.Id;
-        ca2.Entity_Type__c = 'Provider';
+        ca2.Entity_Type__c = 'Billing Provider';
         ca2.Associate_Type__c = 'Primary';
         //accMap.put(ca2.Entity1__c,ca2);
         //caseId1.add(ca2.Case_Number__c);

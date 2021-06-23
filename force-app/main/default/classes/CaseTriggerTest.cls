@@ -2,54 +2,69 @@
 Public Class CaseTriggerTest{
 
     public Static testMethod void CaseTriggerTest(){    
-        RecordType r = [select id,Name from RecordType where SobjectType='Account' and Name='Member'];
-        Account a=new Account(lastname='Test Account',RecordtypeId=r.Id);
-        insert a;
-        
-        //Insert record Type
-        RecordType rec = New RecordType();
-        rec.name = 'Claim';
-        
-        //Inser Case
-        Case cs = new Case();
-        cs.Case_Name__c = 'Test Case';
-        cs.type='Provider Audit New';
-        insert cs;
-        
-        List<Case_Activity__c> csActivity=[SELECT ID from Case_Activity__c where Case__c=:cs.Id];
-        system.assertEquals(6,csActivity.size());
-        
-        csActivity=[SELECT ID from Case_Activity__c where Case__c=:cs.Id and name='Perform Review'];
-        csActivity[0].status__c='Completed';
-        csActivity[0].Activity_Business_Status__c='Need Further Review';
-        update csActivity[0];
-        
-        Case_Activity__c c=new Case_Activity__c(name='Schedule Audit',case__c=cs.Id,Activity_Start_Date__c=system.today());
-        insert c;
-        
-        csActivity=[SELECT ID from Case_Activity__c where Case__c=:cs.Id and name='Contact Provider'];
-        csActivity[0].status__c='Completed';
-        csActivity[0].Activity_Business_Status__c='Mutually Agreed';
-        update csActivity[0];
-    }
-    
-    public Static testMethod void BusinesStatusAndStatusUpdateTest(){    
-        RecordType r = [select id,Name from RecordType where SobjectType='Account' and Name='Member'];
-        Account a=new Account(lastname='Test Account',RecordtypeId=r.Id);
-        insert a;
-        
-        Id creditbalreportId = Schema.SObjectType.Case_Activity__c.getRecordTypeInfosByName().get('Receive & Track Credit Balance').getRecordTypeId();
-        
-        //Inser Case
-        Case cs = new Case();
-        cs.Case_Name__c = 'Test Case';
-        cs.type='Provider Audit-Onsite';
-        insert cs;
-        
-        Case_Activity__c c=new Case_Activity__c(recordTypeId=creditbalreportId,name='Schedule Audit',case__c=cs.Id,Activity_Start_Date__c=system.today(),Activity_Business_Status__c='Credit Balance Reported');
-        insert c;
-        update c;
-        
-        superSort.TestCoverage();
+        Id accRectypeId = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Billing Provider').getRecordTypeId();
+
+        Account acc = new Account(
+            LastName = 'Test',
+            FirstName = 'Test',
+            RecordTypeId = accRectypeId,
+            BillingStreet = 'Street', BillingPostalCode = '123', 
+            BillingCity = 'chennai', BillingCountry = 'india'
+        );
+        insert acc;
+
+        ApexPages.StandardController sc = new ApexPages.StandardController(acc);
+        CaseAssociationsController testAccPlan = new CaseAssociationsController(sc);
+
+        Case csMonthly0 = new Case(
+            Case_Name__c = 'Test Case 1',
+            No_Of_Installment__c = 2,
+            PP_Begin_Date__c = system.today(),
+            Payment_Plan__c = 'Yes',
+            PP_Type__c = 'Monthly',
+            Total_PP_Amount__c = 15000,
+            accountId = acc.Id
+        );
+        insert csMonthly0;
+
+        Case csMonthly1 = new Case(
+            Case_Name__c = 'Test Case 1',
+            PP_Begin_Date__c = system.today(),
+            Payment_Plan__c = 'No',
+            PP_Type__c = 'Monthly',
+            Total_PP_Amount__c = 15000
+        );
+        insert csMonthly1;
+
+        Case_Activity__c ca1 = new Case_Activity__c(
+            Name = 'Perform Provider Self Review',
+            Case__c = csMonthly1.Id,
+            Activity_Start_Date__c = system.today(),
+            IsEnabled__c = true,
+            Case_Activity_Type__c = 'Perform Provider Self Review'
+        );
+        insert ca1;
+
+        Case_Activity__c ca2 = new Case_Activity__c(
+            Name = 'Evaluate Provider Findings',
+            Case__c = csMonthly1.Id,
+            Activity_Start_Date__c = system.today(),
+            IsEnabled__c = false,
+            Case_Activity_Type__c = 'Evaluate Provider Findings'
+        );
+        insert ca2;
+
+        Case csMonthly2 = new Case(
+            Id = csMonthly1.Id,
+            Case_Name__c = 'Test Case 2',
+            No_Of_Installment__c = 2,
+            PP_Begin_Date__c = system.today(),
+            Payment_Plan__c = 'Yes',
+            PP_Type__c = 'Monthly',
+            Total_PP_Amount__c = 15000,
+            Activities_to_close__c = 'Perform Provider Self Review',
+            Activities_to_enable__c = 'Evaluate Provider Findings'
+        );
+        update csMonthly2;
     }
 }

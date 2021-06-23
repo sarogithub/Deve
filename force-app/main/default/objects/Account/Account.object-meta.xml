@@ -238,7 +238,7 @@
     <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
     <searchLayouts>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Entity_Type__pc</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Entity_Type__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Mobile_Phone_Number__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Email_Address__c</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
@@ -254,5 +254,5 @@
         <searchResultsAdditionalFields>Mobile_Phone_Number__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Email_Address__c</searchResultsAdditionalFields>
     </searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

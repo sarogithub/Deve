@@ -29,7 +29,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Entity_Type__pc</field>
+                <field>Entity_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>

@@ -112,6 +112,11 @@
                 <default>false</default>
                 <label>Trial Activity 2 Completed</label>
             </value>
+            <value>
+                <fullName>Provider Audit-Onsite</fullName>
+                <default>false</default>
+                <label>Provider Audit-Onsite</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Provider Audit-Onsite</controllingFieldValue>
