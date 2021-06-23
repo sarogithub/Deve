@@ -8,8 +8,11 @@ For        : CaseAssignment
 Public Class caseAssignment_Test{
     public Static testMethod void CaseAssociate(){
         
-        RecordType r = [select id,Name from RecordType where SobjectType='Account' and Name='Member'];
-        Account a=new Account(lastname='Test Account',RecordtypeId=r.Id);
+        RecordType r = [select id,Name from RecordType where SobjectType='Account' and Name='Billing Provider'];
+        Account a=new Account(
+            lastname='Test Account',RecordtypeId=r.Id, 
+            BillingStreet = 'Street', BillingPostalCode = '123', 
+            BillingCity = 'chennai', BillingCountry = 'india');
         insert a;
          
         //Insert record Type
@@ -23,7 +26,7 @@ Public Class caseAssignment_Test{
         cs.accountid=a.id;
         insert cs;
         
-        RecordType rt = [select id,Name from RecordType where SobjectType='Case_Associate__c' and Name='Member' Limit 1];
+        RecordType rt = [select id,Name from RecordType where SobjectType='Case_Associate__c' and Name='Billing Provider' Limit 1];
         
         /*Schema.DescribeSObjectResult cfrSchema = Schema.SObjectType.Account; 
 Map<String,Schema.RecordTypeInfo> CaseAssociateRecType = cfrSchema.getRecordTypeInfosByName(); 
@@ -34,7 +37,7 @@ Id rtId = CaseAssociateRecType .get('Claim').getRecordTypeId();*/
         ca.Associate_Type__c = 'Primary';
         ca.Case_Number__c = cs.Id;
         ca.Entity1__c=a.id;
-        ca.Entity_type__c='Member';
+        ca.Entity_type__c='Billing Provider';
         ca.recordTypeId = rt.Id;
         
         System.debug('@@@@@@@@ record Type | ' + ca.recordTypeId);

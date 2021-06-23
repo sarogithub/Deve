@@ -47,7 +47,7 @@ public with sharing class PaymentPlanControllerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Yearly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000,
             No_Of_Installment_Backup__c = 1,
             Total_PP_Amount_Backup__c = 10000, 
@@ -153,7 +153,7 @@ public with sharing class PaymentPlanControllerTest {
                             FROM Case WHERE Case_Name__c = 'Test Case 6'];
 
         caseRecUpdate.No_Of_Installment__c = 5;
-        caseRecUpdate.PP_Type__c = 'Yearly';
+        caseRecUpdate.PP_Type__c = 'Annual';
         caseRecUpdate.Total_PP_Amount__c = 19000;
         caseRecUpdate.Payment_Plan__c = 'Yes';
         caseRecUpdate.Activities_to_close__c = 'Compile Audit Findings; Confirm Credit Balance; Contact Provider';
