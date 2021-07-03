@@ -7,7 +7,7 @@ public with sharing class PaymentPlanControllerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000
         );
         insert csWeekly1;
@@ -37,7 +37,7 @@ public with sharing class PaymentPlanControllerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000
         );
         insert csWeekly2;

@@ -9,7 +9,7 @@ public with sharing class ColloCodeTriggerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000,
             Total_Overpayment__c = 20,
             RecordTypeId = recordTypeId 
@@ -33,7 +33,7 @@ public with sharing class ColloCodeTriggerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000,
             Total_Overpayment__c = 0,
             RecordTypeId = recordTypeId 
@@ -57,7 +57,7 @@ public with sharing class ColloCodeTriggerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000,
             Total_Overpayment__c = 30,
             RecordTypeId = recordTypeId 
@@ -88,7 +88,7 @@ public with sharing class ColloCodeTriggerTest {
             No_Of_Installment__c = 2,
             PP_Begin_Date__c = system.today(),
             Payment_Plan__c = 'Yes',
-            PP_Type__c = 'Weekly',
+            PP_Type__c = 'Annual',
             Total_PP_Amount__c = 15000,
             Total_Overpayment__c = 10,
             RecordTypeId = recordTypeId 
